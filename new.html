@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIAMS - Federation for Integrated Arts & Management Studies</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>FIAMS</h1>
+                    <span>Federation for Integrated Arts & Management Studies</span>
+                </div>
+                <nav class="nav" role="navigation">
+                    <ul class="nav-list">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#research">Research & Publications</a></li>
+                        <li><a href="#development">Professional Development</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="btn btn--primary cta-header">Join Our Community</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="relativeHeader">
+            <!-- Hero Section -->
+            <section class="hero" id="about">
+                <div class="hero-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1>Advancing Excellence at the Intersection of Arts and Management</h1>
+                                <p>The premier global federation uniting arts professionals, cultural managers, and creative industry leaders in advancing evidence-based practices and strategic innovation</p>
+                                <div class="hero-cta">
+                                    <button class="btn btn--primary btn--lg" onclick="scrollToSection('membership')">Join Our Community</button>
+                                    <button class="btn btn--outline btn--lg" onclick="scrollToSection('services')">Discover Services</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        <!-- Four Service Cards -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Professional Development</h3>
+                        <p>Continuing education and certification programs for arts and management professionals</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                    <div class="service-card">
+                        <h3>Research Publications</h3>
+                        <p>Peer-reviewed journals and academic resources advancing field knowledge</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                    <div class="service-card">
+                        <h3>Global Networking</h3>
+                        <p>Connect with 12,500+ professionals across 38 countries worldwide</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                    <div class="service-card">
+                        <h3>Industry Leadership</h3>
+                        <p>Shape the future of arts and cultural management through policy and innovation</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="two-column" id="about-detailed">
+        <div class="container">
+            <div class="two-column-content">
+                <div class="two-column-text">
+                    <h1>Engineering Excellence <br>in Arts Management</h1>
+                    <p>At FIAMS, we believe that the intersection of creativity and strategic management creates unparalleled value. Our integrated approach combines artistic vision with business acumen, fostering leaders who can navigate the complex landscape of contemporary cultural industries.</p>
+                    <p>Through rigorous research, professional development programs, and global networking opportunities, we empower arts professionals to drive meaningful change in their organizations and communities.</p>
+
+                    <button class="btn btn--primary cta-header">Know about us</button>
+                </div>
+                <div class="image-placeholder">
+                    <img src="aboutImg.jpg" alt="aboutImg.jpg">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Evidence-based practices</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Strategic innovation frameworks</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Global best practices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12500">1230</div>
+                    <div class="stat-label">Members Worldwide</div>
+                    <!-- <div class="stat-bar">
+                        <div class="stat-progress" data-width="85"></div>
+                    </div> -->
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="38">34</div>
+                    <div class="stat-label">Countries Represented</div>
+                    <!-- <div class="stat-bar">
+                        <div class="stat-progress" data-width="76"></div>
+                    </div> -->
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="285">189</div>
+                    <div class="stat-label">Institutional Partnerships</div>
+                    <!-- <div class="stat-bar">
+                        <div class="stat-progress" data-width="92"></div>
+                    </div> -->
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="40">10</div>
+                    <div class="stat-label">Years of Leadership</div>
+                    <!-- <div class="stat-bar">
+                        <div class="stat-progress" data-width="100"></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Features Section -->
+    <section class="programs" id="development">
+        <div class="container">
+            <h2>Featured Programs & Services</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-image">
+                        <div class="program-icon">🎓</div>
+                    </div>
+                    <h3>Executive Leadership Programs</h3>
+                    <p>Strategic planning, governance, and advanced management training for cultural leaders</p>
+                    <button class="btn btn--primary">Explore Programs</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-image">
+                        <div class="program-icon">🔬</div>
+                    </div>
+                    <h3>Research Collaboration</h3>
+                    <p>Multi-institutional research projects advancing arts and management knowledge</p>
+                    <button class="btn btn--primary">View Research</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-image">
+                        <div class="program-icon">💡</div>
+                    </div>
+                    <h3>Cultural Innovation</h3>
+                    <p>Technology integration and digital transformation initiatives for cultural organizations</p>
+                    <button class="btn btn--primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Four Testimonials/Team Members -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Our Community Leaders</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <div class="avatar-placeholder">SC</div>
+                    </div>
+                    <blockquote>
+                        <p>"FIAMS transformed my leadership approach and tripled our gallery's impact."</p>
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <h4>Dr. Sarah Chen</h4>
+                        <p>Gallery Director, Metropolitan Contemporary</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <div class="avatar-placeholder">MR</div>
+                    </div>
+                    <blockquote>
+                        <p>"The global network has been invaluable for collaborative cultural initiatives."</p>
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <h4>Prof. Marcus Rodriguez</h4>
+                        <p>Cultural Policy Advisor, EU Commission</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <div class="avatar-placeholder">LT</div>
+                    </div>
+                    <blockquote>
+                        <p>"Professional development programs elevated our organizational strategy."</p>
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <h4>Lisa Thompson</h4>
+                        <p>Museum Director, Arts Foundation</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <div class="avatar-placeholder">JP</div>
+                    </div>
+                    <blockquote>
+                        <p>"Research access and peer connections advanced my career significantly."</p>
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <h4>Dr. James Park</h4>
+                        <p>Arts Administrator, Cultural Council</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News/Blog Section -->
+    <section class="happening-now">
+        <h1>Happening Now</h1>
+        
+        <div class="filter-tabs">
+            <a href="#" class="filter-tab active">Events</a>
+            <a href="#" class="filter-tab">Announcements</a>
+            <a href="#" class="filter-tab">News</a>
+        </div>
+        
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <div class="card-meta">Sarath - February 25, 2025</div>
+                    <h3 class="card-title">Nothing here, dont look this and waste your time</h3>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <div class="card-meta">Sarath - February 25, 2025</div>
+                    <h3 class="card-title">Nothing here, dont look this and waste your time</h3>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <div class="card-meta">Sarath - February 25, 2025</div>
+                    <h3 class="card-title">Nothing here, dont look this and waste your time</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA Section -->
+    <section class="final-cta" id="membership">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Ready to Transform Your Creative Vision?</h2>
+                <p>Join the global community of arts and management professionals shaping the future of cultural industries</p>
+                <div class="cta-buttons">
+                    <button class="btn btn--primary btn--lg">Become a Member</button>
+                    <button class="btn btn--outline btn--lg">Schedule Consultation</button>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>info@fiams.org</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>FIAMS</h4>
+                    <p>The Federation for Integrated Arts & Management Studies - Where Creativity Meets Leadership Excellence</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" target="_blank" aria-label="Twitter">Twitter</a>
+                        <a href="#" target="_blank" aria-label="Facebook">Facebook</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#development">Executive Leadership</a></li>
+                        <li><a href="#development">Professional Development</a></li>
+                        <li><a href="#research">Research Collaboration</a></li>
+                        <li><a href="#development">Cultural Innovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#research">Publications</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#contact">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p><strong>Email:</strong> info@fiams.org</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong>Address:</strong> 123 Arts District<br>Creative City, CC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Federation for Integrated Arts & Management Studies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
