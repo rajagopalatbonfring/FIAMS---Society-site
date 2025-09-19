@@ -11,20 +11,63 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <h1>FIAMS</h1>
-                    <span>Federation for Integrated Arts & Management Studies</span>
-                </div>
-                <nav class="nav" role="navigation">
-                    <ul class="nav-list">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#research">Research & Publications</a></li>
-                        <li><a href="#development">Professional Development</a></li>
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#membership">Membership</a></li>
-                        <li><a href="#resources">Resources</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <nav class="subnav">
+                    <a href="#home" class="logo">
+                        <h1>FIAMS</h1>
+                        <span>Federation for Integrated Arts & Management Studies</span>
+                    </a>
+                    <ul class="subnav-list">
+                        <input type="text" placeholder="Search">
+                        <li><a href="#donate">Donate</a></li>
                     </ul>
+                </nav>
+                <nav class="nav" role="navigation">
+                    <ul class="nav-list" id="navMenu">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About Us ▼</a>
+                            <div class="dropdown">
+                                <a href="#mission">Mission & Vision</a>
+                                <a href="#leadership">Leadership Board</a>
+                                <a href="#history">History & Achievements</a>
+                                <a href="#accreditation">Accreditation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#programs" class="nav-link">Programs ▼</a>
+                            <div class="dropdown">
+                                <a href="#arts">Arts Education</a>
+                                <a href="#management">Management Studies</a>
+                                <a href="#integrated">Integrated Curricula</a>
+                                <a href="#professional">Professional Development</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#research" class="nav-link">Research</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#events" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#gallery" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#membership" class="nav-link">Membership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#apply" class="nav-link cta-apply">Apply Now</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </nav>
                 <button class="btn btn--primary cta-header">Join Our Community</button>
             </div>
