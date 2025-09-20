@@ -3,346 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIAMS - Federation for Integrated Arts & Management Studies</title>
-    <link rel="stylesheet" href="new.css">
+    <title>Medical Care Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header Section with Navy Background */
+        .header-section {
+            background: linear-gradient(135deg, #1e2a5e 0%, #2d3e7f 100%);
+            padding: 80px 0 180px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hexagonal pattern background */
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 2px, transparent 2px),
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 60px 60px, 30px 30px;
+            opacity: 0.3;
+        }
+
+        /* Hexagon shapes */
+        .hexagon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+        }
+
+        .hexagon:nth-child(1) {
+            top: 20%;
+            right: 15%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hexagon:nth-child(2) {
+            top: 60%;
+            right: 25%;
+            width: 25px;
+            height: 25px;
+            animation: float 4s ease-in-out infinite reverse;
+        }
+
+        .hexagon:nth-child(3) {
+            top: 40%;
+            right: 5%;
+            width: 30px;
+            height: 30px;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .header-subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Cards positioned between sections */
+        .cards-bridge {
+            position: absolute;
+            bottom: -200px;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 30px;
+            text-align: left;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Light Section - now just provides background */
+        .cards-section {
+            background: #f8f9fa;
+            padding: 250px 0 50px;
+            position: relative;
+        }
+
+        /* Remove old styles that are no longer needed */
+        .images-container {
+            display: none;
+        }
+
+        /* Mobile/Small Screen Styles */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 60px 0 60px;
+            }
+
+            .cards-bridge {
+                position: static;
+                margin-top: 40px;
+            }
+
+            .cards-section {
+                padding: 20px 0 50px;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 0 20px;
+            }
+
+            .service-card {
+                height: auto;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+
+            .card-image {
+                height: 250px;
+            }
+
+            .card-content {
+                padding: 25px 20px;
+            }
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3e7f;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .read-more {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #2d3e7f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+            
+            .header-subtitle {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>FIAMS</h1>
-                    <span>Federation for Integrated Arts & Management Studies</span>
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        
+        <div class="header-container">
+            <h1 class="header-title">Caring for the whole patient,</h1>
+            <h2 class="header-subtitle">not just your symptoms</h2>
+        </div>
+
+        <!-- Cards positioned between sections -->
+        <div class="cards-bridge">
+            <div class="cards-container">
+                <!-- Plastic Surgery Card -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Plastic Surgery" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Plastic Surgery</h3>
+                        <p class="card-description">Learn about different plastic surgery procedures including cosmetic and reconstructive surgery options to help you look and feel your best.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
                 </div>
-                <nav class="nav" role="navigation">
-                    <ul class="nav-list">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#research">Research & Publications</a></li>
-                        <li><a href="#development">Professional Development</a></li>
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#membership">Membership</a></li>
-                        <li><a href="#resources">Resources</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <button class="btn btn--primary cta-header">Join Our Community</button>
+
+                <!-- Orthopaedic Card -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Orthopaedic" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Orthopaedic</h3>
+                        <p class="card-description">Expert care for bone, joint, and muscle conditions. Our orthopaedic specialists provide comprehensive treatment for injuries and chronic conditions.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Nephrology Card -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Nephrology" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Nephrology</h3>
+                        <p class="card-description">Specialized kidney care including diagnosis, treatment and management of kidney diseases, dialysis, and kidney transplant services.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-
-    <div class="relativeHeader">
-            <!-- Hero Section -->
-            <section class="hero" id="about">
-                <div class="hero-overlay"></div>
-                    <div class="container">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <h1>Advancing Excellence at the Intersection of Arts and Management</h1>
-                                <p>The premier global federation uniting arts professionals, cultural managers, and creative industry leaders in advancing evidence-based practices and strategic innovation</p>
-                                <div class="hero-cta">
-                                    <button class="btn btn--primary btn--lg" onclick="scrollToSection('membership')">Join Our Community</button>
-                                    <button class="btn btn--outline btn--lg" onclick="scrollToSection('services')">Discover Services</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-        <!-- Four Service Cards -->
-        <section class="services" id="services">
-            <div class="container">
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Professional Development</h3>
-                        <p>Continuing education and certification programs for arts and management professionals</p>
-                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
-                    </div>
-                    <div class="service-card">
-                        <h3>Research Publications</h3>
-                        <p>Peer-reviewed journals and academic resources advancing field knowledge</p>
-                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
-                    </div>
-                    <div class="service-card">
-                        <h3>Global Networking</h3>
-                        <p>Connect with 12,500+ professionals across 38 countries worldwide</p>
-                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
-                    </div>
-                    <div class="service-card">
-                        <h3>Industry Leadership</h3>
-                        <p>Shape the future of arts and cultural management through policy and innovation</p>
-                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 
-
-    <section class="two-column" id="about-detailed">
-        <div class="container">
-            <div class="two-column-content">
-                <div class="two-column-text">
-                    <h1>Engineering Excellence <br>in Arts Management</h1>
-                    <p>At FIAMS, we believe that the intersection of creativity and strategic management creates unparalleled value. Our integrated approach combines artistic vision with business acumen, fostering leaders who can navigate the complex landscape of contemporary cultural industries.</p>
-                    <p>Through rigorous research, professional development programs, and global networking opportunities, we empower arts professionals to drive meaningful change in their organizations and communities.</p>
-
-                    <button class="btn btn--primary cta-header">Know about us</button>
-                </div>
-                <div class="image-placeholder">
-                    <img src="aboutImg.jpg" alt="aboutImg.jpg">
-                    <div class="feature-list">
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Evidence-based practices</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Strategic innovation frameworks</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Global best practices</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Statistics Section -->
-    <section class="statistics">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="12500">1230</div>
-                    <div class="stat-label">Members Worldwide</div>
-                    <!-- <div class="stat-bar">
-                        <div class="stat-progress" data-width="85"></div>
-                    </div> -->
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="38">34</div>
-                    <div class="stat-label">Countries Represented</div>
-                    <!-- <div class="stat-bar">
-                        <div class="stat-progress" data-width="76"></div>
-                    </div> -->
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="285">189</div>
-                    <div class="stat-label">Institutional Partnerships</div>
-                    <!-- <div class="stat-bar">
-                        <div class="stat-progress" data-width="92"></div>
-                    </div> -->
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="40">10</div>
-                    <div class="stat-label">Years of Leadership</div>
-                    <!-- <div class="stat-bar">
-                        <div class="stat-progress" data-width="100"></div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Three Features Section -->
-    <section class="programs" id="development">
-        <div class="container">
-            <h2>Featured Programs & Services</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-icon">🎓</div>
-                    </div>
-                    <h3>Executive Leadership Programs</h3>
-                    <p>Strategic planning, governance, and advanced management training for cultural leaders</p>
-                    <button class="btn btn--primary">Explore Programs</button>
-                </div>
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-icon">🔬</div>
-                    </div>
-                    <h3>Research Collaboration</h3>
-                    <p>Multi-institutional research projects advancing arts and management knowledge</p>
-                    <button class="btn btn--primary">View Research</button>
-                </div>
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-icon">💡</div>
-                    </div>
-                    <h3>Cultural Innovation</h3>
-                    <p>Technology integration and digital transformation initiatives for cultural organizations</p>
-                    <button class="btn btn--primary">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Four Testimonials/Team Members -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>Our Community Leaders</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-avatar">
-                        <div class="avatar-placeholder">SC</div>
-                    </div>
-                    <blockquote>
-                        <p>"FIAMS transformed my leadership approach and tripled our gallery's impact."</p>
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <h4>Dr. Sarah Chen</h4>
-                        <p>Gallery Director, Metropolitan Contemporary</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-avatar">
-                        <div class="avatar-placeholder">MR</div>
-                    </div>
-                    <blockquote>
-                        <p>"The global network has been invaluable for collaborative cultural initiatives."</p>
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <h4>Prof. Marcus Rodriguez</h4>
-                        <p>Cultural Policy Advisor, EU Commission</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-avatar">
-                        <div class="avatar-placeholder">LT</div>
-                    </div>
-                    <blockquote>
-                        <p>"Professional development programs elevated our organizational strategy."</p>
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <h4>Lisa Thompson</h4>
-                        <p>Museum Director, Arts Foundation</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-avatar">
-                        <div class="avatar-placeholder">JP</div>
-                    </div>
-                    <blockquote>
-                        <p>"Research access and peer connections advanced my career significantly."</p>
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <h4>Dr. James Park</h4>
-                        <p>Arts Administrator, Cultural Council</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News/Blog Section -->
-    <section class="happening-now">
-        <h1>Happening Now</h1>
-        
-        <div class="filter-tabs">
-            <a href="#" class="filter-tab active">Events</a>
-            <a href="#" class="filter-tab">Announcements</a>
-            <a href="#" class="filter-tab">News</a>
-        </div>
-        
-        <div class="content-grid">
-            <div class="content-card">
-                <div class="card-image"></div>
-                <div class="card-content">
-                    <div class="card-meta">Sarath - February 25, 2025</div>
-                    <h3 class="card-title">Nothing here, dont look this and waste your time</h3>
-                </div>
-            </div>
-            
-            <div class="content-card">
-                <div class="card-image"></div>
-                <div class="card-content">
-                    <div class="card-meta">Sarath - February 25, 2025</div>
-                    <h3 class="card-title">Nothing here, dont look this and waste your time</h3>
-                </div>
-            </div>
-            
-            <div class="content-card">
-                <div class="card-image"></div>
-                <div class="card-content">
-                    <div class="card-meta">Sarath - February 25, 2025</div>
-                    <h3 class="card-title">Nothing here, dont look this and waste your time</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact/CTA Section -->
-    <section class="final-cta" id="membership">
-        <div class="cta-overlay"></div>
-        <div class="container">
-            <div class="final-cta-content">
-                <h2>Ready to Transform Your Creative Vision?</h2>
-                <p>Join the global community of arts and management professionals shaping the future of cultural industries</p>
-                <div class="cta-buttons">
-                    <button class="btn btn--primary btn--lg">Become a Member</button>
-                    <button class="btn btn--outline btn--lg">Schedule Consultation</button>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <span>info@fiams.org</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <span>+1 (555) 123-4567</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>FIAMS</h4>
-                    <p>The Federation for Integrated Arts & Management Studies - Where Creativity Meets Leadership Excellence</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-                        <a href="#" target="_blank" aria-label="Twitter">Twitter</a>
-                        <a href="#" target="_blank" aria-label="Facebook">Facebook</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Programs</h4>
-                    <ul>
-                        <li><a href="#development">Executive Leadership</a></li>
-                        <li><a href="#development">Professional Development</a></li>
-                        <li><a href="#research">Research Collaboration</a></li>
-                        <li><a href="#development">Cultural Innovation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#research">Publications</a></li>
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#membership">Membership</a></li>
-                        <li><a href="#contact">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Information</h4>
-                    <p><strong>Email:</strong> info@fiams.org</p>
-                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                    <p><strong>Address:</strong> 123 Arts District<br>Creative City, CC 12345</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Federation for Integrated Arts & Management Studies. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- <script src="app.js"></script> -->
+    <!-- Light Background Section -->
+    <div class="cards-section">
+        <!-- This section now just provides the light background -->
+    </div>
 </body>
 </html>

@@ -1126,18 +1126,42 @@ body {
   font-weight: var(--font-weight-medium);
 }
 
+
+
 /* Research Section */
 .research {
   padding: var(--space-32) 0;
-  background: var(--fiams-warm-white);
+  background-image: url("bannerMap.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
 }
 
-.research h2, .development h2, .networks h2, .resources h2, .impact h2, .membership-benefits h2 {
+.research-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.950);
+  z-index: 0;
+}
+
+
+
+.research h2 {
+  color: var(--fiams-rich-gold);
   text-align: center;
-  color: var(--fiams-deep-purple);
-  font-size: var(--font-size-3xl);
+  font-size: 50px;
   margin-bottom: var(--space-16);
   font-weight: var(--font-weight-bold);
+  position: relative;
+  z-index: 2;
 }
 
 .section-subtitle {
@@ -1145,76 +1169,75 @@ body {
   color: var(--fiams-charcoal-gray);
   font-size: var(--font-size-lg);
   margin-bottom: var(--space-32);
-  opacity: 0.8;
+  position: relative;
+  z-index: 2;
 }
 
-.research-grid, .development-grid, .networks-grid, .resources-grid, .impact-grid, .membership-grid {
+.research-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-24);
+  position: relative;
+  z-index: 2;
 }
 
-.research-card, .development-card, .network-card, .resource-card, .impact-card, .membership-card {
+.research-card {
   background: var(--fiams-warm-white);
   padding: var(--space-20);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: rgba(0, 0, 0, 0.349) 2px 2px 20px;
   transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
+  z-index: 2;
 }
 
-.research-card:hover, .development-card:hover, .network-card:hover, .resource-card:hover, .impact-card:hover, .membership-card:hover {
+.research-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
 }
 
-.research-card h3, .development-card h3, .network-card h3, .resource-card h3, .impact-card h3, .membership-card h3 {
+.research-card h3 {
   color: var(--fiams-deep-purple);
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-12);
   font-weight: var(--font-weight-semibold);
 }
 
-.research-card p, .development-card p, .network-card p, .resource-card p, .impact-card p, .membership-card p {
+.research-card p {
   color: var(--fiams-charcoal-gray);
   opacity: 0.8;
   margin-bottom: var(--space-16);
   line-height: 1.6;
 }
 
-.development-card .btn {
-  width: calc(100% - 48px);
-  margin: 0 var(--space-24) var(--space-24);
-}
-
-.development-icon {
-  font-size: 2rem;
-  margin-bottom: var(--space-12);
-  color: var(--fiams-deep-purple);
-}
-
-.publications, .certifications, .regional-chapters, .research-database, .awards, .benefits {
+.publications {
   margin-top: var(--space-32);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.publications h3, .certifications h3, .regional-chapters h3, .research-database h3, .awards h3, .benefits h3 {
+.publications h3 {
   color: var(--fiams-deep-purple);
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-16);
 }
 
-.publication-list, .certification-list, .chapter-list, .database-list, .awards-list, .benefits-list {
+.publication-list {
   list-style: none;
   padding: 0;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.publication-list li, .certification-list li, .chapter-list li, .database-list li, .awards-list li, .benefits-list li {
+.publication-list li {
   margin-bottom: var(--space-12);
   color: var(--fiams-charcoal-gray);
   font-size: var(--font-size-base);
 }
+
+
+
 
 /* Happening Now Section */
 .happening-now {
@@ -1367,6 +1390,525 @@ body {
 .final-cta .btn--primary:hover {
   background: rgba(255, 255, 255, 0.9);
 }
+
+
+
+/* ===== ENHANCED SECTIONS STYLING ===== */
+
+/* Professional Networks & Special Interest Groups Section */
+.networks {
+    padding: var(--space-32) 0;
+    background: var(--fiams-soft-lavender);
+    background: rgba(168, 218, 220, 0.1);
+}
+
+.networks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-24);
+    margin-bottom: var(--space-32);
+}
+
+.network-card {
+    background: var(--fiams-warm-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--fiams-deep-purple);
+    transition: all var(--duration-normal) var(--ease-standard);
+    position: relative;
+    overflow: hidden;
+}
+
+.network-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--fiams-deep-purple), var(--fiams-rich-gold));
+}
+
+.network-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--fiams-rich-gold);
+}
+
+.network-card h3 {
+    color: var(--fiams-deep-purple);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-12);
+    font-weight: var(--font-weight-semibold);
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.network-card h3::before {
+    content: "👥";
+    font-size: var(--font-size-lg);
+}
+
+.network-card p {
+    color: var(--fiams-charcoal-gray);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.regional-chapters {
+    background: var(--fiams-warm-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+}
+
+.chapter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-16);
+    margin-top: var(--space-16);
+}
+
+.chapter-list li {
+    background: rgba(106, 76, 147, 0.05);
+    padding: var(--space-12) var(--space-16);
+    border-radius: var(--radius-base);
+    border-left: 3px solid var(--fiams-deep-purple);
+}
+
+/* Knowledge Resources & Professional Tools Section */
+.resources {
+    padding: var(--space-32) 0;
+    background: var(--fiams-warm-white);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-24);
+    margin-bottom: var(--space-32);
+}
+
+.resource-card {
+    background: var(--fiams-warm-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid transparent;
+    transition: all var(--duration-normal) var(--ease-standard);
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--fiams-deep-purple), var(--fiams-rich-gold));
+    z-index: -1;
+    border-radius: var(--radius-lg);
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+.resource-card:hover::after {
+    opacity: 1;
+}
+
+.resource-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.resource-card h3 {
+    color: var(--fiams-deep-purple);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-12);
+    font-weight: var(--font-weight-semibold);
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.resource-card h3::before {
+    content: "📚";
+    font-size: var(--font-size-lg);
+}
+
+.resource-card p {
+    color: var(--fiams-charcoal-gray);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.research-database {
+    background: rgba(106, 76, 147, 0.05);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(106, 76, 147, 0.1);
+}
+
+.database-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-12);
+    margin-top: var(--space-16);
+}
+
+.database-list li {
+    background: var(--fiams-warm-white);
+    padding: var(--space-12) var(--space-16);
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.database-list li::before {
+    content: "✓";
+    background: var(--fiams-rich-gold);
+    color: var(--fiams-warm-white);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    flex-shrink: 0;
+}
+
+/* Federation Impact & Professional Recognition Section */
+.impact {
+    padding: var(--space-32) 0;
+    background: linear-gradient(135deg, rgba(106, 76, 147, 0.03), rgba(244, 162, 97, 0.03));
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-24);
+    margin-bottom: var(--space-32);
+}
+
+.impact-card {
+    background: var(--fiams-warm-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--duration-normal) var(--ease-standard);
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--fiams-rich-gold);
+    border-radius: 0 0 var(--radius-full) var(--radius-full);
+}
+
+.impact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.impact-card:hover::before {
+    background: var(--fiams-deep-purple);
+}
+
+.impact-card h3 {
+    color: var(--fiams-deep-purple);
+    font-size: var(--font-size-xl);
+    margin: var(--space-16) 0 var(--space-12);
+    font-weight: var(--font-weight-semibold);
+}
+
+.impact-card p {
+    color: var(--fiams-charcoal-gray);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.awards {
+    background: var(--fiams-warm-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--fiams-rich-gold);
+}
+
+.awards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-16);
+    margin-top: var(--space-16);
+}
+
+.awards-list li {
+    background: rgba(244, 162, 97, 0.1);
+    padding: var(--space-16);
+    border-radius: var(--radius-base);
+    border-left: 4px solid var(--fiams-rich-gold);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-12);
+}
+
+.awards-list li::before {
+    content: "🏆";
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+}
+
+/* Enhanced Membership Benefits Section */
+.membership-benefits {
+    padding: var(--space-32) 0;
+    background: rgba(168, 218, 220, 0.1);
+}
+
+.membership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-24);
+    margin-bottom: var(--space-32);
+}
+
+.membership-card {
+    background: var(--fiams-warm-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--duration-normal) var(--ease-standard);
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.membership-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--fiams-deep-purple);
+}
+
+.membership-card h3 {
+    color: var(--fiams-deep-purple);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-16);
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    padding-bottom: var(--space-12);
+}
+
+.membership-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--fiams-rich-gold);
+    border-radius: var(--radius-full);
+}
+
+.membership-card p {
+    color: var(--fiams-charcoal-gray);
+    margin-bottom: var(--space-20);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+}
+
+.membership-card .btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+.benefits {
+    background: var(--fiams-warm-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-12);
+    margin-top: var(--space-16);
+}
+
+.benefits-list li {
+    background: rgba(106, 76, 147, 0.05);
+    padding: var(--space-12) var(--space-16);
+    border-radius: var(--radius-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+    transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.benefits-list li:hover {
+    background: rgba(106, 76, 147, 0.1);
+    transform: translateX(4px);
+}
+
+.benefits-list li::before {
+    content: "✓";
+    background: var(--fiams-deep-purple);
+    color: var(--fiams-warm-white);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    flex-shrink: 0;
+}
+
+/* Enhanced Development Section Icons */
+.development-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-16);
+    color: var(--fiams-deep-purple);
+    display: block;
+}
+
+/* Replace emoji icons with CSS icons */
+.network-card h3::before,
+.resource-card h3::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: var(--fiams-rich-gold);
+    border-radius: var(--radius-base);
+    flex-shrink: 0;
+}
+
+.development-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--fiams-deep-purple);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-16);
+    color: var(--fiams-warm-white);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Remove emoji icons and replace with geometric shapes */
+.development-icon:nth-of-type(1)::before { content: "📚"; }
+.development-icon:nth-of-type(2)::before { content: "💻"; }
+.development-icon:nth-of-type(3)::before { content: "📊"; }
+
+.impact-card::after,
+.awards-list li::before,
+.database-list li::before {
+    font-size: 0;
+}
+
+.awards-list li::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: var(--fiams-rich-gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Mobile Responsiveness for New Sections */
+@media (max-width: 768px) {
+    .networks-grid,
+    .resources-grid,
+    .impact-grid,
+    .membership-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-16);
+    }
+
+    .chapter-list,
+    .database-list,
+    .awards-list,
+    .benefits-list {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+    }
+
+    .network-card,
+    .resource-card,
+    .impact-card,
+    .membership-card {
+        padding: var(--space-20);
+    }
+
+    .regional-chapters,
+    .research-database,
+    .awards,
+    .benefits {
+        padding: var(--space-20);
+    }
+}
+
+/* Consistent card hover effects */
+.network-card,
+.resource-card,
+.impact-card,
+.membership-card {
+    cursor: pointer;
+}
+
+/* Section spacing consistency */
+.networks,
+.resources,
+.impact,
+.membership-benefits {
+    scroll-margin-top: 80px; /* For smooth scroll navigation */
+}
+
+/* Enhanced visual hierarchy */
+.networks h2,
+.resources h2,
+.impact h2 {
+    position: relative;
+    padding-bottom: var(--space-16);
+}
+
+.networks h2::after,
+.resources h2::after,
+.impact h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--fiams-deep-purple), var(--fiams-rich-gold));
+    border-radius: var(--radius-full);
+}
+
 
 /* Footer Section */
 .footer {
