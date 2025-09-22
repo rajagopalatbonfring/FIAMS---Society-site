@@ -1892,20 +1892,69 @@ body {
 
 /* Certifications Section */
 
-.certification-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: end;
+/* Certifications Section */
+.events-developement {
+    max-width: 650px;
+    position: relative;
+    z-index: 0;
+}
+
+.events-developement > .main-img {
+    max-width: 550px;
+}
+
+.certification-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.certification-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right:0;
+    top: -50px;
+    z-index: 4;
+    background: white;
+}
+
+.certification-img {
+    width: 140px;
 }
 
 
 .certifications {
-    max-width:500px ;
+    position: relative;
+    z-index: 3;
+    margin-top: 0;
+    margin-right: -130px;
+    max-width: 500px;
     background-color: rgb(212, 212, 212);
     padding: 20px 20px 8px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.subcontentdiv{
+    position: absolute;
+    bottom: -10px;
+    left: -350px;
+    background-color: var(--fiams-deep-purple);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    z-index: 0;
+}
+
 
 .certifications h3 {
     font-size: 22px;
@@ -1935,8 +1984,77 @@ body {
 
 .certification-list li strong {
     color: white;
-    font-weight: var(--font-weight-semibold);
+    font-weight: 600;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certification-wrapper {
+      position: relative;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .certifications {
+        margin-top: 0;
+        margin-right: 0;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .certification-img-wrapper {
+        visibility: hidden;
+        position: absolute;
+        top: 60%;
+        width: 74px;
+        height: 74px;
+    }
+
+    .certification-img {
+       visibility: hidden;
+        width: 100px;
+    }
+
+    .events-developement {
+        max-width: 100%;
+    }
+
+    .certifications h3 {
+        font-size: 20px;
+    }
+
+    .certification-list li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certifications {
+        padding: 15px;
+    }
+
+    .certifications h3 {
+        font-size: 18px;
+    }
+
+    .certification-list li {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+
+    .certification-img-wrapper {
+      visibility: hidden;
+        width: 60px;
+        height: 60px;
+    }
+
+    .certification-img {
+      visibility: hidden;
+        width: 80px;
+    }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1961,14 +2079,6 @@ body {
     .expertise-content h3 {
         font-size: 22px;
     }
-    
-    .certifications {
-        padding: 30px 20px;
-    }
-    
-    .certifications h3 {
-        font-size: 24px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1984,9 +2094,6 @@ body {
         padding: 20px;
     }
     
-    .certifications {
-        padding: 25px 15px;
-    }
 }
 
 
