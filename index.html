@@ -7,63 +7,124 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-content">
+                <div class="top-left">
+                    <span>📞 +91 98762 83923</span>
+                    <span>✉ info@fiams.org</span>
+                </div>
+                <div class="top-right">
+                    <span>Login | Membership | Support</span>
+                    <span class="btn">Join Our Community</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <nav class="subnav">
-                    <a href="#home" class="logo">
-                        <h1>FIAMS</h1>
-                        <span>Federation for Integrated Arts & Management Studies</span>
-                    </a>
-                    <ul class="subnav-list">
-                        <input type="text" placeholder="Search">
-                        <li><a href="#donate">Donate</a></li>
-                    </ul>
-                </nav>
-                <nav class="nav" role="navigation">
-                    <ul class="nav-list" id="navMenu">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <span class="logo-text">FIAMS</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link">Home</a>
+                            <a href="#" class="nav-link active">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link">About ▼</a>
+                            <a href="#" class="nav-link has-dropdown">ABOUT</a>
                             <div class="dropdown">
-                                <a href="#mission">Mission & Vision</a>
-                                <a href="#leadership">Leadership Board</a>
-                                <a href="#history">History & Achievements</a>
-                                <a href="#accreditation">Accreditation</a>
+                                <a href="#" class="dropdown-item">Mission & Vision</a>
+                                <a href="#" class="dropdown-item">Leadership Board</a>
+                                <a href="#" class="dropdown-item">History & Achievements</a>
+                                <a href="#" class="dropdown-item">Accreditation</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#programs" class="nav-link">Programs & Events ▼</a>
+                            <a href="#" class="nav-link has-dropdown">PROGRAMS & EVENTS</a>
                             <div class="dropdown">
-                                <a href="#arts">Arts Education</a>
-                                <a href="#management">Management Studies</a>
-                                <a href="#integrated">Integrated Curricula</a>
-                                <a href="#professional">Professional Development</a>
+                                <a href="#" class="dropdown-item">Arts Education</a>
+                                <a href="#" class="dropdown-item">Management Studies</a>
+                                <a href="#" class="dropdown-item">Integrated Curricula</a>
+                                <a href="#" class="dropdown-item">Professional Development</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#research" class="nav-link">Research & Publications</a>
+                            <a href="#" class="nav-link">PROFESSIONAL DEVELOPMENT</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#personaldevelopment" class="nav-link">Professional Development</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#membership" class="nav-link">Membership</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contact</a>
+                            <a href="#" class="nav-link has-dropdown">MORE</a>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-item">Research & Publications</a>
+                                <a href="#" class="dropdown-item">Membership</a>
+                                <a href="#" class="dropdown-item">Contact</a>
+                            </div>
                         </li>
                     </ul>
-                    <div class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+
+                    <!-- Search -->
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search...">
                     </div>
                 </nav>
-                <button class="btn btn--primary cta-header">Join Our Community</button>
+
+                <!-- Mobile Toggle -->
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link">HOME</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(this)">ABOUT ▼</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Mission & Vision</a>
+                            <a href="#" class="mobile-dropdown-item">Leadership Board</a>
+                            <a href="#" class="mobile-dropdown-item">History & Achievements</a>
+                            <a href="#" class="mobile-dropdown-item">Accreditation</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="nav-link has-dropdown" onclick="toggleMobileDropdown(this)">PROGRAMS & EVENTS</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Arts Education</a>
+                            <a href="#" class="mobile-dropdown-item">Management Studies</a>
+                            <a href="#" class="mobile-dropdown-item">Integrated Curricula</a>
+                            <a href="#" class="mobile-dropdown-item">Professional Development</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                            <a href="#" class="nav-link">PROFESSIONAL DEVELOPMENT</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                            <a href="#" class="nav-link has-dropdown" onclick="toggleMobileDropdown(this)">MORE</a>
+                            <div class="mobile-dropdown">
+                                <a href="#" class="mobile-dropdown-item">Research & Publications</a>
+                                <a href="#" class="mobile-dropdown-item">Membership</a>
+                                <a href="#" class="mobile-dropdown-item">Contact</a>
+                            </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="mobile-search">
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
             </div>
         </div>
     </header>
@@ -282,14 +343,17 @@
                 </div>
             </div>
             
-            <div class="certifications">
-                <h3>Certification Programs</h3>
-                <ul class="certification-list">
-                    <li><strong>Certified Arts Administrator (CAA)</strong> - 6-month program</li>
-                    <li><strong>Cultural Policy Analyst Certificate</strong> - 4-month program</li>
-                    <li><strong>Executive Arts Leadership Credential</strong> - 8-month program</li>
-                </ul>
+            <div class="certification-wrapper">
+                <div class="certifications">
+                    <h3>Certification Programs</h3>
+                    <ul class="certification-list">
+                        <li><strong>Certified Arts Administrator (CAA)</strong> - 6-month program</li>
+                        <li><strong>Cultural Policy Analyst Certificate</strong> - 4-month program</li>
+                        <li><strong>Executive Arts Leadership Credential</strong> - 8-month program</li>
+                    </ul>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -297,7 +361,7 @@
     <!-- Current & Ongoing Events Section -->
     <section class="happening-now" id="events">
         <div class="container">
-            <h2>Active Federation Initiatives & Upcoming Opportunities</h2>
+            <h2>Active Federation Initiatives <br>& Upcoming Opportunities</h2>
             <p class="section-subtitle">Join our global events and initiatives to connect and collaborate.</p>
             <div class="filter-tabs">
                 <a href="#" class="filter-tab active">Events</a>
@@ -533,5 +597,38 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(element) {
+            const navItem = element.parentElement;
+            navItem.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

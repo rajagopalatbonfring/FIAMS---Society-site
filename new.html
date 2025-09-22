@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Care Section</title>
+    <title>Eleanify - Exact Navigation Structure</title>
     <style>
+        :root {
+            --coral-red: #E94B3C;
+            --white: #ffffff;
+            --dark-gray: #333333;
+            --light-gray: #666666;
+            --border-color: rgba(0,0,0,0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,280 +20,508 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f8f8;
         }
 
-        /* Header Section with Navy Background */
-        .header-section {
-            background: linear-gradient(135deg, #1e2a5e 0%, #2d3e7f 100%);
-            padding: 80px 0 180px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Hexagonal pattern background */
-        .header-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 2px, transparent 2px),
-                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 60px 60px, 30px 30px;
-            opacity: 0.3;
-        }
-
-        /* Hexagon shapes */
-        .hexagon {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-        }
-
-        .hexagon:nth-child(1) {
-            top: 20%;
-            right: 15%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hexagon:nth-child(2) {
-            top: 60%;
-            right: 25%;
-            width: 25px;
-            height: 25px;
-            animation: float 4s ease-in-out infinite reverse;
-        }
-
-        .hexagon:nth-child(3) {
-            top: 40%;
-            right: 5%;
-            width: 30px;
-            height: 30px;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        .header-container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
+            padding: 0 15px;
         }
 
-        .header-title {
+        /* Top Header Bar */
+        .top-header {
+            background: var(--coral-red);
             color: white;
-            font-size: 2.8rem;
-            font-weight: 300;
-            margin-bottom: 15px;
-            line-height: 1.2;
+            font-size: 13px;
+            padding: 8px 0;
         }
 
-        .header-subtitle {
-            color: rgba(255,255,255,0.9);
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
+        .top-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Cards positioned between sections */
-        .cards-bridge {
+        .top-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .top-header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main Header */
+        .main-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-circle {
+            width: 32px;
+            height: 32px;
+            background: var(--coral-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .logo-text {
+            color: var(--dark-gray);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: var(--coral-red);
+            color: white;
+        }
+
+        /* Dropdown Arrow */
+        .nav-link.has-dropdown::after {
+            content: " ▼";
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
             position: absolute;
-            bottom: -200px;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border: 1px solid var(--border-color);
+            border-radius: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 13px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--coral-red);
+            color: white;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Search Box */
+        .search-box {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 13px;
+            width: 180px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--coral-red);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 3px;
+            background: var(--dark-gray);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
             left: 0;
             right: 0;
-            z-index: 10;
-        }
-
-        .cards-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            padding: 0 30px;
-        }
-
-        .service-card {
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 480px;
-            display: flex;
-            flex-direction: column;
+            border-top: 1px solid var(--border-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 999;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
+        .mobile-menu.active {
             display: block;
         }
 
-        .card-content {
-            padding: 30px;
-            text-align: left;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+        .mobile-nav-list {
+            list-style: none;
+            padding: 10px 0;
         }
 
-        /* Light Section - now just provides background */
-        .cards-section {
-            background: #f8f9fa;
-            padding: 250px 0 50px;
-            position: relative;
+        .mobile-nav-item {
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        /* Remove old styles that are no longer needed */
-        .images-container {
+        .mobile-nav-link {
+            display: block;
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mobile-nav-link:hover {
+            background: var(--coral-red);
+            color: white;
+        }
+
+        .mobile-dropdown {
+            background: #f8f8f8;
             display: none;
         }
 
-        /* Mobile/Small Screen Styles */
-        @media (max-width: 768px) {
-            .header-section {
-                padding: 60px 0 60px;
-            }
-
-            .cards-bridge {
-                position: static;
-                margin-top: 40px;
-            }
-
-            .cards-section {
-                padding: 20px 0 50px;
-            }
-
-            .cards-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 0 20px;
-            }
-
-            .service-card {
-                height: auto;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            }
-
-            .card-image {
-                height: 250px;
-            }
-
-            .card-content {
-                padding: 25px 20px;
-            }
+        .mobile-nav-item.active .mobile-dropdown {
+            display: block;
         }
 
-        .card-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #2d3e7f;
-            margin-bottom: 15px;
-        }
-
-        .card-description {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .read-more {
-            color: #4a90e2;
+        .mobile-dropdown-item {
+            display: block;
+            color: var(--light-gray);
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
+            padding: 12px 40px;
+            font-size: 13px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .read-more:hover {
-            color: #2d3e7f;
+        .mobile-dropdown-item:hover {
+            background: var(--coral-red);
+            color: white;
+        }
+
+        .mobile-search {
+            padding: 15px 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .mobile-search .search-input {
+            width: 100%;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .header-title {
-                font-size: 2rem;
+            .top-header-content {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .nav-list {
+                gap: 0;
             }
             
-            .header-subtitle {
-                font-size: 1.6rem;
+            .nav-link {
+                padding: 12px 10px;
+                font-size: 13px;
             }
+            
+            .search-input {
+                width: 150px;
+            }
+        }
+
+        /* Demo content */
+        .demo-content {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--dark-gray);
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <div class="header-section">
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-        <div class="hexagon"></div>
-        
-        <div class="header-container">
-            <h1 class="header-title">Caring for the whole patient,</h1>
-            <h2 class="header-subtitle">not just your symptoms</h2>
-        </div>
-
-        <!-- Cards positioned between sections -->
-        <div class="cards-bridge">
-            <div class="cards-container">
-                <!-- Plastic Surgery Card -->
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Plastic Surgery" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Plastic Surgery</h3>
-                        <p class="card-description">Learn about different plastic surgery procedures including cosmetic and reconstructive surgery options to help you look and feel your best.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-content">
+                <div class="top-left">
+                    <span>📞 Contact FIAMS</span>
+                    <span>✉ info@fiams.org</span>
                 </div>
-
-                <!-- Orthopaedic Card -->
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Orthopaedic" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Orthopaedic</h3>
-                        <p class="card-description">Expert care for bone, joint, and muscle conditions. Our orthopaedic specialists provide comprehensive treatment for injuries and chronic conditions.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-
-                <!-- Nephrology Card -->
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Nephrology" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Nephrology</h3>
-                        <p class="card-description">Specialized kidney care including diagnosis, treatment and management of kidney diseases, dialysis, and kidney transplant services.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
+                <div class="top-right">
+                    <span>🌐 English ▼</span>
+                    <span>Login | Membership | Support</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Light Background Section -->
-    <div class="cards-section">
-        <!-- This section now just provides the light background -->
-    </div>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <div class="logo-circle">F</div>
+                    <span class="logo-text">IAMS</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link has-dropdown">ABOUT</a>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-item">Mission & Vision</a>
+                                <a href="#" class="dropdown-item">Leadership Board</a>
+                                <a href="#" class="dropdown-item">History & Achievements</a>
+                                <a href="#" class="dropdown-item">Accreditation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link has-dropdown">PROGRAMS & EVENTS</a>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-item">Arts Education</a>
+                                <a href="#" class="dropdown-item">Management Studies</a>
+                                <a href="#" class="dropdown-item">Integrated Curricula</a>
+                                <a href="#" class="dropdown-item">Professional Development</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link has-dropdown">MORE</a>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-item">Research & Publications</a>
+                                <a href="#" class="dropdown-item">Professional Development</a>
+                                <a href="#" class="dropdown-item">Membership</a>
+                                <a href="#" class="dropdown-item">Contact</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">JOIN OUR COMMUNITY</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search -->
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search...">
+                    </div>
+                </nav>
+
+                <!-- Mobile Toggle -->
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link">HOME</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(this)">OUR SERVICE ▼</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Wordpress Template</a>
+                            <a href="#" class="mobile-dropdown-item">Google Adsense</a>
+                            <a href="#" class="mobile-dropdown-item">Bootstrap Developing</a>
+                            <a href="#" class="mobile-dropdown-item">Game Design</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link">BLOGGING</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(this)">TUTORIAL ▼</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Web Development</a>
+                            <a href="#" class="mobile-dropdown-item">Mobile Apps</a>
+                            <a href="#" class="mobile-dropdown-item">UI/UX Design</a>
+                            <a href="#" class="mobile-dropdown-item">Digital Marketing</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(this)">PORTFOLIO ▼</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Web Projects</a>
+                            <a href="#" class="mobile-dropdown-item">Mobile Projects</a>
+                            <a href="#" class="mobile-dropdown-item">Design Work</a>
+                            <a href="#" class="mobile-dropdown-item">Client Reviews</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(this)">OUR TEAM ▼</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Developers</a>
+                            <a href="#" class="mobile-dropdown-item">Designers</a>
+                            <a href="#" class="mobile-dropdown-item">Project Managers</a>
+                            <a href="#" class="mobile-dropdown-item">Support Team</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="mobile-search">
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(element) {
+            const navItem = element.parentElement;
+            navItem.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
