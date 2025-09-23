@@ -1665,20 +1665,20 @@ body {
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-16);
   color: #2c3e50;
-  text-align: left;
+  text-align: center;
 }
 
 .happening-now p {
   color: var(--fiams-charcoal-gray);
   font-size: clamp(16px, 2.5vw, 18px);
-  text-align: left;
+  text-align: center;
 }
 
 .filter-tabs {
   display: flex;
   gap: var(--space-16);
   margin-bottom: var(--space-32);
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -1827,23 +1827,25 @@ body {
 }
 
 .expertise-header {
-    text-align: left;
+    text-align: center;
     margin-bottom: clamp(40px, 6vw, 60px);
-    max-width: 600px;
+    max-width: 100%;
 }
 
 .expertise-header h2 {
-    font-size: clamp(32px, 5vw, 50px);
+    font-size: 50px;
     font-weight: bold;
     color: #2c3e50;
     margin-bottom: 20px;
     line-height: 1.2;
+    text-align: center;
 }
 
 .expertise-header > .section-subtitle {
     font-size: clamp(14px, 2vw, 16px);
     color: #6c757d;
     line-height: 1.6;
+    text-align: center;
 }
 
 .expertise-grid {
@@ -2278,17 +2280,17 @@ body {
 }
 
 .networks > .container > h2 {
-    font-size: clamp(32px, 5vw, 50px);
+    font-size: clamp(32px, 6vw, 50px);
     font-weight: bold;
     color: #2c3e50;
     line-height: 1.2;
-    text-align: left;
+    text-align: center;
 }
 
 .networks > .container > p {
     color: var(--fiams-charcoal-gray);
     font-size: clamp(16px, 2.5vw, 18px);
-    text-align: left;
+    text-align: center;
 }
 
 .networks-grid {
@@ -2494,198 +2496,25 @@ body {
 
 
 
-
-/* Knowledge Resources & Professional Tools Section */
-.resources {
-    padding: var(--space-32) 0;
-    background: var(--fiams-warm-white);
-}
-
-.resources-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-24);
-    margin-bottom: var(--space-32);
-}
-
-.resource-card {
-    background: var(--fiams-warm-white);
-    padding: var(--space-24);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    border: 2px solid transparent;
-    transition: all var(--duration-normal) var(--ease-standard);
-    position: relative;
-    overflow: hidden;
-}
-
-.resource-card::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(135deg, var(--fiams-deep-purple), var(--fiams-rich-gold));
-    z-index: -1;
-    border-radius: var(--radius-lg);
-    opacity: 0;
-    transition: opacity var(--duration-normal) var(--ease-standard);
-}
-
-.resource-card:hover::after {
-    opacity: 1;
-}
-
-.resource-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-}
-
-.resource-card h3 {
-    color: var(--fiams-deep-purple);
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--space-12);
-    font-weight: var(--font-weight-semibold);
-    display: flex;
-    align-items: center;
-    gap: var(--space-8);
-}
-
-.resource-card h3::before {
-    content: "📚";
-    font-size: var(--font-size-lg);
-}
-
-.resource-card p {
-    color: var(--fiams-charcoal-gray);
-    opacity: 0.8;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.research-database {
-    background: rgba(106, 76, 147, 0.05);
-    padding: var(--space-24);
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(106, 76, 147, 0.1);
-}
-
-.database-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-12);
-    margin-top: var(--space-16);
-}
-
-.database-list li {
-    background: var(--fiams-warm-white);
-    padding: var(--space-12) var(--space-16);
-    border-radius: var(--radius-base);
-    box-shadow: var(--shadow-xs);
-    display: flex;
-    align-items: center;
-    gap: var(--space-8);
-}
-
-.database-list li::before {
-    content: "✓";
-    background: var(--fiams-rich-gold);
-    color: var(--fiams-warm-white);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-    flex-shrink: 0;
-}
-
-/* Federation Impact & Professional Recognition Section */
-.impact {
-    padding: var(--space-32) 0;
-    background: linear-gradient(135deg, rgba(106, 76, 147, 0.03), rgba(244, 162, 97, 0.03));
-}
-
-.impact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-24);
-    margin-bottom: var(--space-32);
-}
-
-.impact-card {
-    background: var(--fiams-warm-white);
-    padding: var(--space-24);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    text-align: center;
-    transition: all var(--duration-normal) var(--ease-standard);
-    position: relative;
-    overflow: hidden;
-}
-
-
-.impact-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-}
-
-.impact-card:hover::before {
-    background: var(--fiams-deep-purple);
-}
-
-.impact-card h3 {
-    color: var(--fiams-deep-purple);
-    font-size: var(--font-size-xl);
-    margin: var(--space-16) 0 var(--space-12);
-    font-weight: var(--font-weight-semibold);
-}
-
-.impact-card p {
-    color: var(--fiams-charcoal-gray);
-    opacity: 0.8;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.awards {
-    background: var(--fiams-warm-white);
-    padding: var(--space-24);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    border: 2px solid var(--fiams-rich-gold);
-}
-
-.awards-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-16);
-    margin-top: var(--space-16);
-}
-
-.awards-list li {
-    background: rgba(244, 162, 97, 0.1);
-    padding: var(--space-16);
-    border-radius: var(--radius-base);
-    border-left: 4px solid var(--fiams-rich-gold);
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-12);
-}
-
-.awards-list li::before {
-    content: "🏆";
-    font-size: var(--font-size-lg);
-    flex-shrink: 0;
-}
-
 /* Enhanced Membership Benefits Section */
 .membership-benefits {
     padding: var(--space-32) 0;
     background: rgba(168, 218, 220, 0.1);
+}
+
+.membership-benefits > .container > h2{
+  text-align: center;
+  font-size: 50px;
+  color: #2c3e50;
+  margin-bottom: var(--space-16);
+  font-weight: var(--font-weight-bold);
+}
+
+.membership-benefits > .container > p{
+  color: var(--fiams-charcoal-gray);
+  margin-bottom: var(--space-16);
+  line-height: 1.7;
+  text-align: center;
 }
 
 .membership-grid {
@@ -2721,17 +2550,6 @@ body {
     padding-bottom: var(--space-12);
 }
 
-.membership-card h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 3px;
-    background: var(--fiams-rich-gold);
-    border-radius: var(--radius-full);
-}
 
 .membership-card p {
     color: var(--fiams-charcoal-gray);
@@ -2745,16 +2563,74 @@ body {
     margin-top: auto;
 }
 
+
+
+/* benefits and awards section */
+.member-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Member Recognition */
+.member-recognition {
+    background: rgba(244, 162, 97, 0.1);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-24);
+    text-align: start;
+}
+
+.member-recognition h3 {
+    color: var(--fiams-charcoal-gray);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-16);
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    padding-bottom: var(--space-12);
+}
+
+.awards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-top: var(--space-16);
+}
+
+.award-item {
+    background: var(--fiams-warm-white);
+    padding: var(--space-12);
+    border-radius: var(--radius-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+
+
 .benefits {
     background: var(--fiams-warm-white);
-    padding: var(--space-24);
+    padding: var(--space-10);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
 }
 
+
+.benefits h3 {
+    color: var(--fiams-charcoal-gray);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-16);
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    padding-bottom: var(--space-12);
+}
+
+
 .benefits-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-12);
     margin-top: var(--space-16);
 }
