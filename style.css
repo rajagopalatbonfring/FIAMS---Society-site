@@ -2250,7 +2250,7 @@ body {
     text-align: left;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
 }
 
 .chapters-wrapper > h3 {
@@ -2263,6 +2263,8 @@ body {
 
 
 .chapters-wrapper{
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2274,14 +2276,27 @@ body {
   height: 100ppx;
 }
 
+.elementDiv{
+    position: absolute;
+    bottom: 70px;
+    right: -35px;
+    background-color: var(--fiams-deep-purple);
+    padding: 100px 0;
+    border-radius: 2px;
+    box-shadow: 0 4px 15px rgb(231, 231, 231);
+    min-width: 300px;
+    z-index: -1;
+}
 
 .chapter-list {
   list-style:none;
   padding: 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 20px rgba(54, 54, 54, 0.445);
 }
 
 .chapter-list li {
-    background: rgba(145, 126, 172, 0.05);
+    background: rgb(255, 255, 255);
     padding: var(--space-8) var(--space-16);
     border-left: 3px solid var(--fiams-deep-purple);
 }
