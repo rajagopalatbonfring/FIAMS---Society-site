@@ -1653,7 +1653,7 @@ body {
 /* Happening Now Section */
 /* Happening Now Section */
 .happening-now {
-  background: #f5f5f5;
+  background: #fcfcfc;
   margin: 0 auto;
   padding: var(--space-32) var(--space-20);
 }
@@ -1707,27 +1707,29 @@ body {
 }
 
 .content-card {
-  background: var(--fiams-warm-white);
-  border-radius: var(--radius-lg);
+  /* background: var(--fiams-warm-white); */
+  /* border-radius: var(--radius-lg); */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  /* box-shadow: var(--shadow-sm); */
   transition: all var(--duration-normal) var(--ease-standard);
 }
 
 .content-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
 }
 
 .card-image {
+  border-radius: 20px;
   width: 100%;
-  height: 200px;
+  height: 250px;
   background: var(--fiams-charcoal-gray);
   position: relative;
 }
 
 .card-content {
-  padding: var(--space-20);
+  padding: var(--space-10) var(--space-10);
 }
 
 .card-meta {
@@ -1738,7 +1740,7 @@ body {
 }
 
 .card-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   color: var(--fiams-deep-purple);
   line-height: 1.4;
@@ -2731,7 +2733,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #694c93af;
+  background: #694c93d0;
   z-index: 1;
 }
 
@@ -2741,14 +2743,15 @@ body {
 }
 
 .final-cta-content h2 {
-  color: var(--fiams-charcoal-gray);
+  color: var(--fiams-warm-white);
   font-size: var(--font-size-3xl);
   margin-bottom: var(--space-16);
   font-weight: var(--font-weight-bold);
 }
 
 .final-cta-content p {
-  color: var(--fiams-charcoal-gray);
+  color: var(--fiams-warm-white);
+  opacity: 0.8;
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-32);
   max-width: 600px;
