@@ -77,7 +77,7 @@ const ActiveFederationEvents = () => {
   ];
 
   return (
-    <section className="bg-[#fcfcfc] mx-auto py-8 px-5 md:py-12 md:px-5 max-[480px]:py-6 max-[480px]:px-4" id="events">
+    <section className="bg-gray-200 bg-gradient-to-r from-white via-gray-200 to-white mx-auto py-8 px-5 md:py-12 md:px-5 max-[480px]:py-6 max-[480px]:px-4" id="events">
       <div className="container mx-auto px-[clamp(15px,2vw,20px)]">
         <h2 className="text-5xl lg:text-6xl font-bold text-[#2c3e50] mb-5 leading-[1.2]">
           Active Federation Initiatives <br />& Upcoming Opportunities

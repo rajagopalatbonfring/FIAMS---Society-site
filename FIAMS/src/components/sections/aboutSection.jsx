@@ -95,7 +95,7 @@ import recentResearch from '../../assets/research.jpg'
 
 export default function AboutSection() {
   return (
-    <section id="about-detailed" className="py-24 bg-gradient-to-b from-white to-gray-50 text-left">
+    <section id="about-detailed" className="py-24 bg-gradient-to-r from-gray-50 via-white to-gray-50  text-left">
       <div className="container mx-auto">
         {/* Main Hero Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-28">
