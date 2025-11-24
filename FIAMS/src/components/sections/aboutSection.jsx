@@ -98,7 +98,7 @@ export default function AboutSection() {
     <section id="about-detailed" className="py-24 bg-gradient-to-r from-gray-50 via-white to-gray-50  text-left">
       <div className="container mx-auto">
         {/* Main Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-28">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="inline-block">
@@ -138,7 +138,7 @@ export default function AboutSection() {
             </div>
             
             {/* Floating Feature Card */}
-            <div className="block mt-4 sm:absolute sm:mt-0 -top-16 -right-3 bg-white rounded-2xl p-4 shadow-2xl max-w-sm border border-gray-100 hover:shadow-3xl transition-shadow">
+            <div className="block mt-4 sm:absolute sm:mt-0 -bottom-16 -right-12 bg-white rounded-2xl p-4 shadow-2xl max-w-sm border border-gray-100 hover:shadow-3xl transition-shadow">
               <div className="space-y-5">
                 <div className="flex items-start gap-4 group cursor-pointer">
                   <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform">
