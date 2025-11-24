@@ -1,0 +1,40 @@
+/* 1. @import MUST BE THE VERY FIRST LINE — NO EXCEPTIONS */
+@import url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2');
+
+/* 2. Now Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Font-face after the import */
+@font-face {
+  font-family: 'FK Grotesk Neue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* 4. Everything else is safe now */
+@layer base {
+  html {
+    font-family: 'FK Grotesk Neue', Inter, sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-8xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap;
+  }
+  .btn--primary {
+    @apply bg-fiams-purple text-white hover:bg-[#5a3d7a] hover:shadow-xl;
+  }
+  .btn--outline {
+    @apply border-2 border-white text-white hover:bg-white hover:text-fiams-purple;
+  }
+  .btn--lg {
+    @apply px-8 py-4 text-lg;
+  }
+}
