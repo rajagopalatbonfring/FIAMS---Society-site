@@ -20,7 +20,7 @@ export default function Research() {
         <div className="text-left flex flex-col lg:flex-row gap-16 items-start mb-20">
           <div className="lg:w-1/2">
             <div className="inline-block">
-              <span className="text-sm font-semibold text-fiams-gold bg-fiams-gold/30 px-4 py-2 rounded-full">
+              <span className="text-sm font-semibold text-fiams-gold bg-fiams-gold/30 px-4 py-2 rounded-full inline-block">
                 Research & Publications
               </span>
             </div>
@@ -59,7 +59,7 @@ export default function Research() {
               className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
                style={{ backgroundImage: `url(${currentPub})`, backgroundSize:'cover'}}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-purple-900/80" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-purple-300/80" />
             
             <div className="relative h-full flex flex-col p-10 text-white">
               <div className="flex items-center gap-4 mb-8">
@@ -117,7 +117,7 @@ export default function Research() {
               className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
               style={{ backgroundImage: `url(${recentResearch})`, backgroundSize:'cover'}}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-fiams-gold/80" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-orange-300/80" />
             
             <div className="relative h-full flex flex-col p-8 text-white">
               <div className="flex items-center gap-4 mb-6">

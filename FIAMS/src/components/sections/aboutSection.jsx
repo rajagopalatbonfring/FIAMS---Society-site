@@ -102,7 +102,7 @@ export default function AboutSection() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="inline-block">
-              <span className="text-sm font-semibold text-purple-700 bg-purple-50 px-4 py-2 rounded-full">
+              <span className="text-sm font-semibold text-purple-600 bg-purple-100 px-4 py-2 rounded-full inline-block">
                 About FIAMS
               </span>
             </div>
@@ -128,7 +128,7 @@ export default function AboutSection() {
 
           {/* Right Image with Overlay */}
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img 
                 src={abtimg} 
                 alt="Team collaboration" 
@@ -138,37 +138,37 @@ export default function AboutSection() {
             </div>
             
             {/* Floating Feature Card */}
-            <div className="block mt-4 sm:absolute sm:mt-0 -bottom-16 -right-12 bg-white rounded-2xl p-4 shadow-2xl max-w-sm border border-gray-100 hover:shadow-3xl transition-shadow">
-              <div className="space-y-5">
-                <div className="flex items-start gap-4 group cursor-pointer">
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="w-6 h-6 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
+
+                <div className="block mt-4 sm:absolute sm:mt-0 bottom-32 -right-12 flex items-center bg-white rounded-full p-3 shadow-2xl max-w-sm border border-gray-100 group hover:shadow-3xl transition-shadow flex items-start gap-4 cursor-pointer">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <span className="w-8 h-8 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
                   </div>
                   <div>
                     <span className="text-base font-semibold text-gray-800 group-hover:text-purple-700 transition-colors">Evidence-based practices</span>
                     <p className="text-sm text-gray-500 mt-1">Grounded in research</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2 group cursor-pointer">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="w-6 h-6 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
+
+                <div className="block mt-4 sm:absolute sm:mt-0 bottom-8 -right-10 flex items-center bg-white rounded-full p-3 shadow-2xl max-w-sm border border-gray-100 group hover:shadow-3xl transition-shadow flex items-start gap-4 cursor-pointer">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <span className="w-8 h-8 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
                   </div>
                   <div>
                     <span className="text-base font-semibold text-gray-800 group-hover:text-purple-700 transition-colors">Strategic innovation frameworks</span>
                     <p className="text-sm text-gray-500 mt-1">Forward-thinking solutions</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 group cursor-pointer">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="w-6 h-6 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
+
+                <div className="block mt-4 sm:absolute sm:mt-0 top-64 -right-16 flex items-center bg-white rounded-full p-3 shadow-2xl max-w-sm border border-gray-100 group hover:shadow-3xl transition-shadow flex items-start gap-4 cursor-pointer">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-orange-400 to-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <span className="w-8 h-8 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
                   </div>
                   <div>
                     <span className="text-base font-semibold text-gray-800 group-hover:text-purple-700 transition-colors">Global best practices</span>
                     <p className="text-sm text-gray-500 mt-1">International standards</p>
                   </div>
                 </div>
-              </div>
-            </div>
+
           </div>
         </div>
 

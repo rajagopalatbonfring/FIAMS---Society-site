@@ -65,7 +65,7 @@ export default function Services() {
           </div>
           
           <div className="flex-1 max-w-lg flex flex-col items-start text-right">
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-lg text-gray-600 leading-relaxed mb-6">
               Discover comprehensive services designed to empower arts and cultural management professionals worldwide through education, networking, and research excellence.
             </p>
 
@@ -79,12 +79,10 @@ export default function Services() {
           {services.map((service, index) => (
             <div 
               key={service.title} 
-              className={`text-left p-8 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all group rounded-2xl ${
-                index % 2 === 0 ? 'bg-purple-100' : 'bg-white'
-              }`}
+              className={`text-left p-8 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all group rounded-2xl bg-white `}
             >
               <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
-              <p className="text-gray-600 text-sm mb-4 leading-relaxed">{service.desc}</p>
+              <p className="text-lg text-gray-600 text-sm mb-4 leading-relaxed">{service.desc}</p>
               <div className="text-2xl text-purple-600 group-hover:translate-x-2 transition-transform">→</div>
             </div>
           ))}
