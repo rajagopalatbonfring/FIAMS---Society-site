@@ -14,7 +14,7 @@ import FinalCTA from "../components/sections/finalCTA";
 import Footer from "../components/layout/footer";
 
 export default function Home() {
-  return (
+  return ( 
     <>
       <TopHeader />
       <Navbar />
