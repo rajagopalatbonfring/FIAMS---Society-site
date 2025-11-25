@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIAMS - Federation for Integrated Arts & Management Studies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-content">
+                <div class="top-left">
+                    <span>📞 +91 98762 83923</span>
+                    <span>✉ info@fiams.org</span>
+                </div>
+                <div class="top-right">
+                    <span>Login | Membership | Support</span>
+                    <span class="btn">Join Our Community</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <span class="logo-text">FIAMS</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link has-dropdown">ABOUT</a>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-item">Mission & Vision</a>
+                                <a href="#" class="dropdown-item">Leadership Board</a>
+                                <a href="#" class="dropdown-item">History & Achievements</a>
+                                <a href="#" class="dropdown-item">Accreditation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link has-dropdown">PROGRAMS & EVENTS</a>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-item">Arts Education</a>
+                                <a href="#" class="dropdown-item">Management Studies</a>
+                                <a href="#" class="dropdown-item">Integrated Curricula</a>
+                                <a href="#" class="dropdown-item">Professional Development</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">PROFESSIONAL DEVELOPMENT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link has-dropdown">MORE</a>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-item">Research & Publications</a>
+                                <a href="#" class="dropdown-item">Membership</a>
+                                <a href="#" class="dropdown-item">Contact</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Search -->
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search...">
+                    </div>
+                </nav>
+
+                <!-- Mobile Toggle -->
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                        <a href="#" class="nav-link">HOME</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="nav-link has-dropdown" onclick="toggleMobileDropdown(this)">ABOUT</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Mission & Vision</a>
+                            <a href="#" class="mobile-dropdown-item">Leadership Board</a>
+                            <a href="#" class="mobile-dropdown-item">History & Achievements</a>
+                            <a href="#" class="mobile-dropdown-item">Accreditation</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="nav-link has-dropdown" onclick="toggleMobileDropdown(this)">PROGRAMS & EVENTS</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Arts Education</a>
+                            <a href="#" class="mobile-dropdown-item">Management Studies</a>
+                            <a href="#" class="mobile-dropdown-item">Integrated Curricula</a>
+                            <a href="#" class="mobile-dropdown-item">Professional Development</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                            <a href="#" class="nav-link">PROFESSIONAL DEVELOPMENT</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                            <a href="#" class="nav-link has-dropdown" onclick="toggleMobileDropdown(this)">MORE</a>
+                            <div class="mobile-dropdown">
+                                <a href="#" class="mobile-dropdown-item">Research & Publications</a>
+                                <a href="#" class="mobile-dropdown-item">Membership</a>
+                                <a href="#" class="mobile-dropdown-item">Contact</a>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="mobile-nav-link">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="mobile-search">
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="relativeHeader">
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Advancing Excellence at the Intersection of Arts and Management</h1>
+                        <p>The premier global federation uniting arts professionals, cultural managers, and creative industry leaders in advancing evidence-based practices and strategic innovation</p>
+                        <div class="hero-cta">
+                            <button class="btn btn--primary btn--lg" onclick="scrollToSection('membership')">Join Our Community</button>
+                            <button class="btn btn--outline btn--lg" onclick="scrollToSection('services')">Discover Services</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four Service Cards -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Professional Development</h3>
+                        <p>Continuing education and certification programs for arts and management professionals</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                    <div class="service-card">
+                        <h3>Research Publications</h3>
+                        <p>Peer-reviewed journals and academic resources advancing field knowledge</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                    <div class="service-card">
+                        <h3>Global Networking</h3>
+                        <p>Connect with 12,500+ professionals across 38 countries worldwide</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                    <div class="service-card">
+                        <h3>Industry Leadership</h3>
+                        <p>Shape the future of arts and cultural management through policy and innovation</p>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Two-Column Section -->
+    <section class="two-column" id="about-detailed">
+        <div class="container">
+            <div class="two-column-content">
+                <div class="two-column-text">
+                    <h1>Engineering Excellence <br>in Arts Management</h1>
+                    <p>At FIAMS, we believe that the intersection of creativity and strategic management creates unparalleled value. Our integrated approach combines artistic vision with business acumen, fostering leaders who can navigate the complex landscape of contemporary cultural industries.</p>
+                    <p>Through rigorous research, professional development programs, and global networking opportunities, we empower arts professionals to drive meaningful change in their organizations and communities.</p>
+                    <button class="btn btn--primary cta-header">Know about us</button>
+                </div>
+                <div class="image-placeholder">
+                    <img src="aboutImg.jpg" alt="aboutImg.jpg">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Evidence-based practices</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Strategic innovation frameworks</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Global best practices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publications">
+                <div class="publication-card">
+                    <div class="publication-heading-wrap">
+                        <h3>Current Publications</h3>
+                    </div>
+                    <ul class="publication-list">
+                        <li>Journal of Arts Management Research - Quarterly, Peer-Reviewed</li>
+                        <li>Cultural Policy & Practice Review - Bi-annual</li>
+                        <li>Arts Leadership White Paper Series - Monthly</li>
+                        <li>Global Arts Management Trends Report - Annual</li>
+                    </ul>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-heading-wrap2">
+                        <h3>Recent Research Highlights</h3>
+                    </div>
+                    <ul class="publication-list">
+                        <li><em>Post-Pandemic Audience Engagement: A Multi-National Study</em> (September 2025)</li>
+                        <li><em>Digital Revenue Streams in Performing Arts Organizations</em> (August 2025)</li>
+                        <li><em>Cultural Policy Impact Assessment Framework</em> (July 2025)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12500">1230</div>
+                    <div class="stat-label">Members Worldwide</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="38">34</div>
+                    <div class="stat-label">Countries Represented</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="285">189</div>
+                    <div class="stat-label">Institutional Partnerships</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="40">10</div>
+                    <div class="stat-label">Years of Leadership</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Publications Section -->
+    <section class="research" id="research">
+        <div class="research-overlay"></div>
+        <div class="container">
+            <div class="container">
+                <div class="advanceknow-section">
+                    <div class="section-header">
+                        <h2>Advancing Knowledge in <br>Arts and Cultural Management</h2>
+                        <p class="section-subtitle">Explore our cutting-edge research and publications shaping the future of the arts industry.</p>
+                        <!-- NEW: Added Impact Statement -->
+                        <div class="impact-statement">
+                            <p><strong>Our Impact:</strong> FIAMS research cited in 15+ national cultural policies • Co-developer of International Arts Management Framework • 45+ university partnerships</p>
+                        </div>
+                        <button class="btn btn--primary btn--lg">Explore</button>
+                    </div>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <h3>Cultural Economics & Policy Analysis</h3>
+                            <p>Investigating the economic impact and policy frameworks for cultural institutions.</p>
+                        </div>
+                        <div class="research-card">
+                            <h3>Audience Development & Engagement</h3>
+                            <p>Strategies to enhance audience participation and loyalty in arts organizations.</p>
+                        </div>
+                        <div class="research-card">
+                            <h3>Digital Transformation</h3>
+                            <p>Innovative approaches to integrate technology in arts programming.</p>
+                        </div>
+                        <div class="research-card">
+                            <h3>Sustainable Funding Models</h3>
+                            <p>Developing resilient financial strategies for cultural institutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Professional Development Opportunities Section -->
+    <section class="development" id="development">
+        <div class="container">
+            <div class="expertise-header">
+                <h2>Elevate Your Arts Management Expertise</h2>
+                <p class="section-subtitle">Advance your career with our tailored professional development programs.</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card white-card">
+                    <div class="expertise-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" alt="Leadership conference">
+                    </div>
+                    <div class="expertise-content">
+                        <div class="expertise-icon">
+                            🎓
+                        </div>
+                        <h3>Executive Leadership <br> Series</h3>
+                        <p>Strategic planning, governance, and financial sustainability for cultural leaders.</p>
+                        <button class="read-more-btn">Explore Series</button>
+                    </div>
+                </div>
+                
+                <div class="expertise-card dark-card">
+                    <div class="expertise-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=200&fit=crop" alt="Digital workshop">
+                    </div>
+                    <div class="expertise-content">
+                        <div class="expertise-icon">
+                            💻
+                        </div>
+                        <h3>Digital Innovation <br> Workshops</h3>
+                        <p>Technology integration and digital marketing strategies for arts organizations.</p>
+                        <button class="read-more-btn outline">Join Workshops</button>
+                    </div>
+                </div>
+                
+                <div class="expertise-card orange-card">
+                    <div class="expertise-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=200&fit=crop" alt="Research and evaluation">
+                    </div>
+                    <div class="expertise-content">
+                        <div class="expertise-icon">
+                            📊
+                        </div>
+                        <h3>Research & Evaluation <br>Methods</h3>
+                        <p>Data-driven decision-making and impact assessment for arts programs.</p>
+                        <button class="read-more-btn white">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certification-wrapper">
+                <div class="certifications">
+                    <h3>Certification Programs</h3>
+                    <ul class="certification-list">
+                        <li><strong>Certified Arts Administrator (CAA)</strong> - 6-month program</li>
+                        <li><strong>Cultural Policy Analyst Certificate</strong> - 4-month program</li>
+                        <li><strong>Executive Arts Leadership Credential</strong> - 8-month program</li>
+                    </ul>
+                    <div class="certification-img-wrapper"> 
+                        <img class="certification-img" src="certifiedImg.png" alt=""> 
+                    </div>
+                </div>
+                <div class="events-developement">
+                    <img class= "main-img" src="photo-collage.png" alt="">
+                    <div class="subcontentdiv">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Current & Ongoing Events Section -->
+    <section class="happening-now" id="events">
+        <div class="container">
+            <h2>Active Federation Initiatives <br>& Upcoming Opportunities</h2>
+            <p class="section-subtitle">Join our global events and initiatives to connect and collaborate.</p>
+            <div class="filter-tabs">
+                <a href="#" class="filter-tab active">Events</a>
+                <a href="#" class="filter-tab">Initiatives</a>
+                <a href="#" class="filter-tab">Conferences</a>
+            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <div class="card-meta">March 15-18, 2026</div>
+                        <h3 class="card-title">Global Arts Management Summit 2026</h3>
+                        <p>Theme: Cultural Renaissance: Leadership in the Digital Age. London, UK.</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <div class="card-meta">November 22-23, 2025</div>
+                        <h3 class="card-title">Arts Funding Innovation Conference</h3>
+                        <p>Exploring innovative funding models in Toronto, Canada.</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <div class="card-meta">December 10, 2025</div>
+                        <h3 class="card-title">Virtual Symposium: Museum Management</h3>
+                        <p>Excellence in museum leadership, online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Professional Networks & Special Interest Groups Section -->
+    <section class="networks" id="networks">
+        <div class="container">
+            <h2>Connect Within Your <br>Arts Management Specialty</h2>
+            <p class="section-subtitle">Join our professional networks to collaborate with peers worldwide.</p>
+            <div class="networks-grid">
+
+                <div class="networkCard-wrap">
+                    <img src="museumdirector.jpg" alt="">
+                    <div class="network-card">
+                        <h3>Museum Directors Council</h3>
+                        <p>450+ members focusing on strategic leadership for museums.</p>
+                    </div>
+                </div>
+                <div class="networkCard-wrap">
+                    <img src="performingArts.jpg" alt="">
+                    <div class="network-card">
+                        <h3>Performing Arts Managers Alliance</h3>
+                        <p>680+ members leading theater, dance, and music venues.</p>
+                    </div>
+                </div>
+
+                <div class="networkCard-wrap">
+                    <img src="policyResearchers.jpg" alt="">
+                    <div class="network-card">
+                        <h3>Cultural Policy Researchers Group</h3>
+                        <p>320+ members advancing academic and policy analysis.</p>
+                    </div>
+                </div>
+
+                <div class="networkCard-wrap">
+                    <img src="artsFunding.jpg" alt="">
+                    <div class="network-card">
+                        <h3>Arts Funding Specialists Network</h3>
+                        <p>280+ members specializing in development and fundraising.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="regional-chapters">
+                <img src="mapsectionimg.png" alt="">
+                <div class="chapters-wrapper">
+                    <h3>Regional Chapters</h3>
+                    <ul class="chapter-list">
+                        <li>🟢<strong>North America</strong>: 8 active chapters</li>
+                        <li>🟣<strong>Europe</strong>: 12 chapters in major cultural centers</li>
+                        <li>🔴<strong>Asia-Pacific</strong>: 5 emerging chapters</li>
+                        <li>🔵<strong>Latin America</strong>: 3 growing chapters</li>
+                        <div class="elementDiv"></div>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Value & Professional Benefits Section -->
+    <section class="membership-benefits" id="membership">
+        <div class="container">
+            <h2>Professional Membership in <br> Arts Management Excellence</h2>
+            <p class="section-subtitle">Unlock exclusive benefits to advance your career and impact.</p>
+
+            
+            <div class="membership-grid">
+                <div class="membership-card">
+                    <h3>Professional Member</h3>
+                    <p>$245/year - Full access to research, events, and networking for individuals.</p>
+                    <button class="btn btn--primary">Join Now</button>
+                </div>
+                <div class="membership-card">
+                    <h3>Institutional Member</h3>
+                    <p>$1,200/year - Up to 5 accounts, custom consultations for organizations.</p>
+                    <button class="btn btn--primary">Apply Now</button>
+                </div>
+                <div class="membership-card">
+                    <h3>Student/Early Career</h3>
+                    <p>$95/year - Mentorship and career resources for new professionals.</p>
+                    <button class="btn btn--primary">Get Started</button>
+                </div>
+            </div>
+            
+            <div class="member-wrapper">
+                <div class="member-recognition-wrapper">
+                    <img src="recognition.jpg" alt="">
+                </div>
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul class="benefits-list">
+                        <li>Full access to research publications and digital library</li>
+                        <li>Priority registration and member pricing for programs</li>
+                        <li>Global network of 12,500+ arts professionals</li>
+                        <li>Career advancement through job boards and mentorship</li>
+                        <li>Exclusive industry intelligence and trend reports</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="member-recognition">
+                <div class="awards-grid">
+                    <h3>Member Recognition Opportunities</h3>
+                    <div class="award-item"> 
+                        <div class="award-icon">
+                            <img src="award1.png" alt="">
+                        </div> 
+                        Excellence in <br>Arts Leadership Award
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <img src="award4.png" alt="">
+                        </div> 
+                        Innovation in <br>Cultural Management
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <img src="award3.png" alt="">
+                        </div> 
+                        Emerging <br>Professional Recognition
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <img src="award2.png" alt="">
+                        </div> 
+                        Research <br>Excellence Awards
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call-to-Action Section -->
+     <div class="cta-cover">
+        <img src="freepik__adjust__48474.png" alt="">
+        <section class="final-cta" id="final-cta">
+            <div class="cta-overlay"></div>
+            
+            <div class="container">
+                <div class="final-cta-content">
+                    <h2>Join the Global Community Advancing Arts Management Excellence</h2>
+                    <p>Connect with 12,500+ cultural leaders, access cutting-edge research, and advance your impact in the arts and cultural sector.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn--primary btn--lg">Apply for Membership</button>
+                        <button class="btn btn--outline btn--lg">Schedule Information Session</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </div>
+
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section-Main-content">
+                <h4>FIAMS</h4>
+                <p>The Federation for Integrated Arts & Management Studies - Where Creativity Meets Leadership Excellence</p>
+                <div class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Newsletter Signup">
+                    <button class="newsletter-button">Subscribe</button>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="LinkedIn"><span class="social-icon">Li</span></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><span class="social-icon">X</span></a>
+                    <a href="#" target="_blank" aria-label="Facebook"><span class="social-icon">Fb</span></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#development">Executive Leadership</a></li>
+                    <li><a href="#development">Professional Development</a></li>
+                    <li><a href="#research">Research Collaboration</a></li>
+                    <li><a href="#development">Cultural Innovation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#research">Publications</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#contact">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p><strong>Email:</strong> info@fiams.org</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Address:</strong> 123 Arts District<br>Creative City, CC 12345</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Federation for Integrated Arts & Management Studies. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(element) {
+            const navItem = element.parentElement;
+            navItem.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script> -->
+</body>
+</html>
