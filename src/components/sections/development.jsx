@@ -8,6 +8,9 @@ const ProfessionalDevelopment = () => {
       <div className="max-w-[1440px] mx-auto px-[clamp(15px,2vw,20px)]">
         {/* Header */}
         <div className="mb-[clamp(40px,6vw,60px)] max-w-full">
+          <span className="text-sm font-semibold text-purple-600 bg-purple-100 px-4 py-2 mb-8 rounded-full inline-block">
+            Professional Development
+          </span>
           <h2 className="text-5xl lg:text-6xl font-bold text-[#2c3e50] mb-5 leading-[1.2]">
             Elevate Your Arts Management Expertise
           </h2>
@@ -28,9 +31,9 @@ const ProfessionalDevelopment = () => {
               />
             </div>
             <div className="p-[clamp(20px,3vw,25px)] max-[480px]:p-[clamp(15px,2.5vw,20px)]">
-              <div className="w-12 h-12 mb-5 flex items-center justify-center bg-[rgba(255,107,53,0.1)] rounded-lg text-2xl">
+              {/* <div className="w-12 h-12 mb-5 flex items-center justify-center bg-[rgba(255,107,53,0.1)] rounded-lg text-2xl">
                 🎓
-              </div>
+              </div> */}
               <h3 className="text-[clamp(20px,3vw,24px)] max-md:text-[clamp(18px,2.8vw,22px)] max-[480px]:text-[clamp(16px,2.5vw,20px)] font-bold mb-[15px] leading-[1.3] text-fiams-gold">
                 Executive Leadership <br /> Series
               </h3>
@@ -53,9 +56,9 @@ const ProfessionalDevelopment = () => {
               />
             </div>
             <div className="p-[clamp(20px,3vw,25px)] max-[480px]:p-[clamp(15px,2.5vw,20px)]">
-              <div className="w-12 h-12 mb-5 flex items-center justify-center bg-[rgba(255,107,53,0.2)] rounded-lg text-2xl">
+              {/* <div className="w-12 h-12 mb-5 flex items-center justify-center bg-[rgba(255,107,53,0.2)] rounded-lg text-2xl">
                 💻
-              </div>
+              </div> */}
               <h3 className="text-[clamp(20px,3vw,24px)] max-md:text-[clamp(18px,2.8vw,22px)] max-[480px]:text-[clamp(16px,2.5vw,20px)] font-bold mb-[15px] leading-[1.3] text-white">
                 Digital Innovation <br /> Workshops
               </h3>
@@ -78,9 +81,9 @@ const ProfessionalDevelopment = () => {
               />
             </div>
             <div className="p-[clamp(20px,3vw,25px)] max-[480px]:p-[clamp(15px,2.5vw,20px)]">
-              <div className="w-12 h-12 mb-5 flex items-center justify-center bg-[rgba(255,255,255,0.2)] rounded-lg text-2xl">
+              {/* <div className="w-12 h-12 mb-5 flex items-center justify-center bg-[rgba(255,255,255,0.2)] rounded-lg text-2xl">
                 📊
-              </div>
+              </div> */}
               <h3 className="text-[clamp(20px,3vw,24px)] max-md:text-[clamp(18px,2.8vw,22px)] max-[480px]:text-[clamp(16px,2.5vw,20px)] font-bold mb-[15px] leading-[1.3] text-white">
                 Research & Evaluation <br />Methods
               </h3>
