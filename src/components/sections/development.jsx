@@ -133,3 +133,199 @@ const ProfessionalDevelopment = () => {
 };
 
 export default ProfessionalDevelopment;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // proffessional styled design
+
+// import React from 'react';
+
+// // Mock images for demo
+// const collageImg = "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop";
+// const verifiedLogo = "https://images.unsplash.com/photo-1599658880436-c61792e70672?w=100&h=100&fit=crop";
+
+// const ProfessionalDevelopment = () => {
+//   const programs = [
+//     {
+//       title: "Executive Leadership",
+//       description: "Strategic planning and financial sustainability for cultural leaders",
+//       duration: "12 weeks",
+//       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+//     },
+//     {
+//       title: "Digital Innovation",
+//       description: "Technology integration and digital marketing for arts organizations",
+//       duration: "8 weeks",
+//       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop"
+//     },
+//     {
+//       title: "Research & Evaluation",
+//       description: "Data-driven decision-making and impact assessment",
+//       duration: "10 weeks",
+//       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop"
+//     }
+//   ];
+
+//   const certifications = [
+//     { name: "Certified Arts Administrator", code: "CAA", duration: "6 months" },
+//     { name: "Cultural Policy Analyst", code: "CPA", duration: "4 months" },
+//     { name: "Executive Arts Leadership", code: "EAL", duration: "8 months" }
+//   ];
+
+//   return (
+//     <section className="py-40 bg-gray-50" id="development">
+//       <div className="max-w-8xl mx-auto px-6 lg:px-8">
+        
+//         {/* Header */}
+//         <div className="mb-32">
+//           <div className="inline-block mb-3">
+//             <span className="text-xs font-medium tracking-wider uppercase text-gray-500">
+//               Professional Development
+//             </span>
+//           </div>
+//           <h2 className="text-5xl lg:text-6xl font-medium tracking-tight text-gray-900 mb-6 max-w-4xl">
+//             Advance your career in arts management
+//           </h2>
+//           <p className="text-lg text-gray-600 max-w-2xl">
+//             Tailored programs designed for working professionals seeking to elevate their expertise.
+//           </p>
+//         </div>
+
+//         {/* Programs Grid */}
+//         <div className="grid lg:grid-cols-3 gap-px bg-gray-300 mb-32">
+//           {programs.map((program, index) => (
+//             <div
+//               key={index}
+//               className="group bg-white hover:bg-gray-900 transition-colors duration-300"
+//             >
+//               <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+//                 <img 
+//                   src={program.image}
+//                   alt={program.title}
+//                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+//                 />
+//               </div>
+//               <div className="p-10">
+//                 <div className="flex items-center justify-between mb-4">
+//                   <h3 className="text-2xl font-medium text-gray-900 group-hover:text-white transition-colors">
+//                     {program.title}
+//                   </h3>
+//                   <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+//                     {program.duration}
+//                   </span>
+//                 </div>
+//                 <p className="text-gray-600 group-hover:text-gray-300 transition-colors mb-8">
+//                   {program.description}
+//                 </p>
+//                 <button className="text-sm font-medium text-gray-900 group-hover:text-white transition-colors underline underline-offset-4">
+//                   Learn more
+//                 </button>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Certification Section */}
+//         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          
+//           {/* Left: Image */}
+//           <div className="relative">
+//             <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
+//               <img 
+//                 src={collageImg}
+//                 alt="Professional development"
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+//             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
+//               <div className="text-center">
+//                 <div className="text-3xl font-medium text-gray-900">3</div>
+//                 <div className="text-xs text-gray-500 uppercase tracking-wide">Programs</div>
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Right: Certifications */}
+//           <div>
+//             <h3 className="text-3xl font-medium text-gray-900 mb-2">
+//               Professional Certifications
+//             </h3>
+//             <p className="text-gray-600 mb-12">
+//               Industry-recognized credentials that validate your expertise
+//             </p>
+            
+//             <div className="space-y-1 bg-white border border-gray-200">
+//               {certifications.map((cert, index) => (
+//                 <div
+//                   key={index}
+//                   className="group p-8 hover:bg-gray-50 transition-colors border-b border-gray-200 last:border-b-0"
+//                 >
+//                   <div className="flex items-start justify-between">
+//                     <div className="flex-1">
+//                       <div className="flex items-center gap-3 mb-2">
+//                         <span className="text-xs font-mono font-medium text-gray-400 bg-gray-100 px-2 py-1">
+//                           {cert.code}
+//                         </span>
+//                         <span className="text-xs text-gray-500">
+//                           {cert.duration}
+//                         </span>
+//                       </div>
+//                       <h4 className="text-xl font-medium text-gray-900">
+//                         {cert.name}
+//                       </h4>
+//                     </div>
+//                     <div className="text-gray-400 group-hover:text-gray-900 transition-colors">
+//                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+//                       </svg>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+
+//             <div className="mt-12 pt-8 border-t border-gray-200">
+//               <p className="text-sm text-gray-500 mb-4">
+//                 All certifications include practical projects, mentorship, and career support
+//               </p>
+//               <button className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors underline underline-offset-4">
+//                 View full curriculum
+//               </button>
+//             </div>
+//           </div>
+
+//         </div>
+
+//         {/* Bottom CTA */}
+//         <div className="mt-32 pt-16 border-t border-gray-200">
+//           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+//             <div>
+//               <h3 className="text-2xl font-medium text-gray-900 mb-2">
+//                 Ready to advance your career?
+//               </h3>
+//               <p className="text-gray-600">
+//                 Speak with our admissions team about the right program for you
+//               </p>
+//             </div>
+//             <button className="bg-gray-900 text-white px-8 py-4 hover:bg-gray-800 transition-colors text-sm font-medium whitespace-nowrap">
+//               Schedule consultation
+//             </button>
+//           </div>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default ProfessionalDevelopment;

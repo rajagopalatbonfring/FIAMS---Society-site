@@ -1,92 +1,3 @@
-// import abtimg from '../../assets/aboutImg.jpg'
-// import currentPub from '../../assets/publication.jpg'
-// export default function AboutSection() {
-//   return (
-//     <section id="about-detailed" className="py-24 text-left">
-//       <div className="container">
-//         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-//           <div>
-//             <h2 className="text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-//               Engineering Excellence <br className="hidden md:block"/>in Arts Management
-//             </h2>
-//             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-//               At FIAMS, we believe that the intersection of creativity and strategic management creates unparalleled value. 
-//               Our integrated approach combines artistic vision with business acumen, fostering leaders who can navigate the complex landscape of contemporary cultural industries.
-//             </p>
-//             <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-//               Through rigorous research, professional development programs, and global networking opportunities, 
-//               we empower arts professionals to drive meaningful change in their organizations and communities.
-//             </p>
-//             <button className="btn btn--primary text-lg px-10 py-4">Know about us</button>
-//           </div>
-//           <div className="relative group">
-//             <div className="bg-gray-400 h-96 rounded-2xl">
-//               <img src={abtimg} alt="" />
-//             </div>
-//             <div className="absolute -bottom-20 -right-20 bg-white p-4 rounded-2xl shadow-2xl w-80">
-//               <div className="space-y-4">
-//                 <div className="flex items-center gap-3">
-//                   <span className="w-6 h-6 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
-//                   <span className="font-medium">Evidence-based practices</span>
-//                 </div>
-//                 <div className="flex items-center gap-3">
-//                   <span className="w-6 h-6 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
-//                   <span className="font-medium">Strategic innovation frameworks</span>
-//                 </div>
-//                 <div className="flex items-center gap-3">
-//                   <span className="w-6 h-6 bg-fiams-gold text-white rounded-full flex items-center justify-center font-bold">✓</span>
-//                   <span className="font-medium">Global best practices</span>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="grid md:grid-cols-2 gap-12">
-//           <div className="flex gap-6 bg-gradient-to-br from-fiams-purple to-fiams-purple/90 text-white rounded-2xl shadow-2xl">
-//             <div 
-//               className='flex items-center justify-center rounded-l-xl'
-//               style={{ backgroundImage: `url(${currentPub})`, backgroundSize:'cover'}}
-//             >
-//               <h3 className="text-2xl text-center font-bold mb-6">Current Publications</h3>
-//             </div>
-//             <div
-//               className='flex items-center justify-center'
-//             >
-//               <ul className="space-y-3 text-lg">
-//                 <li>Journal of Arts Management Research - Quarterly, Peer-Reviewed</li>
-//                 <li>Cultural Policy & Practice Review - Bi-annual</li>
-//                 <li>Arts Leadership White Paper Series - Monthly</li>
-//                 <li>Global Arts Management Trends Report - Annual</li>
-//               </ul>
-//             </div>
-//           </div>
-//           <div className="bg-gray-100 py-6 rounded-2xl shadow-xl flex gap-6">
-//             <div
-//               className='flex items-center justify-center rounded-l-xl'
-//               style={{ backgroundImage: `url(${currentPub})`, backgroundSize:'cover'}}
-//             >
-//               <h3 className="text-2xl font-bold mb-6 text-white p-0">Recent Research Highlights</h3>
-//             </div>
-//             <div className='flex items-center justify-center'>
-//               <ul className="space-y-3 text-gray-700">
-//                 <li><em>Post-Pandemic Audience Engagement: A Multi-National Study</em> (September 2025)</li>
-//                 <li><em>Digital Revenue Streams in Performing Arts Organizations</em> (August 2025)</li>
-//                 <li><em>Cultural Policy Impact Assessment Framework</em> (July 2025)</li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
 
 import { CheckCircle, ArrowRight, BookOpen, TrendingUp } from 'lucide-react';
 import abtimg from '../../assets/aboutImg.jpg'
@@ -172,109 +83,147 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Publications and Research Section */}
-        {/* <div className="grid lg:grid-cols-2 gap-8">
-          <div className="group relative rounded-3xl overflow-hidden shadow-xl h-full md:h-[450px] hover:shadow-2xl transition-all duration-300">
-            <div 
-              className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
-               style={{ backgroundImage: `url(${currentPub})`, backgroundSize:'cover'}}
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-purple-900/80" />
-            
-            <div className="relative h-full flex flex-col p-10 text-white">
-              <div className="flex items-center gap-4 mb-8">
-                <div>
-                  <h3 className="text-4xl font-bold">Current</h3>
-                  <h3 className="text-4xl font-bold">Publications</h3>
-                </div>
-              </div>
-              
-              <ul className="space-y-5 flex-grow">
-                <li className="flex items-start gap-4 group/item">
-                  <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-orange-500 transition-colors">
-                    <ArrowRight className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-100 leading-relaxed group-hover/item:text-white transition-colors">
-                    Journal of Arts Management Research - Quarterly, Peer-Reviewed
-                  </span>
-                </li>
-                <li className="flex items-start gap-4 group/item">
-                  <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-orange-500 transition-colors">
-                    <ArrowRight className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-100 leading-relaxed group-hover/item:text-white transition-colors">
-                    Cultural Policy & Practice Review - Bi-annual
-                  </span>
-                </li>
-                <li className="flex items-start gap-4 group/item">
-                  <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-orange-500 transition-colors">
-                    <ArrowRight className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-100 leading-relaxed group-hover/item:text-white transition-colors">
-                    Arts Leadership White Paper Series - Monthly
-                  </span>
-                </li>
-                <li className="flex items-start gap-4 group/item">
-                  <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-orange-500 transition-colors">
-                    <ArrowRight className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-100 leading-relaxed group-hover/item:text-white transition-colors">
-                    Global Arts Management Trends Report - Annual
-                  </span>
-                </li>
-              </ul>
-
-              <button className="mt-6 text-white font-semibold flex items-center gap-2 group/btn">
-                <span className="group-hover/btn:underline">View all publications</span>
-                <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
-              </button>
-            </div>
-          </div>
-
-          <div className="group relative rounded-3xl overflow-hidden shadow-xl h-full md:h-[450px] hover:shadow-2xl transition-all duration-300">
-            <div 
-              className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
-              style={{ backgroundImage: `url(${recentResearch})`, backgroundSize:'cover'}}
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-fiams-gold/80" />
-            
-            <div className="relative h-full flex flex-col p-8 text-white">
-              <div className="flex items-center gap-4 mb-6">
-                <div>
-                  <h3 className="text-4xl font-bold">Recent</h3>
-                  <h3 className="text-4xl font-bold">Research Highlights</h3>
-                </div>
-              </div>
-              
-              <ul className="space-y-4 flex-grow">
-                <li className="group/item bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all cursor-pointer border border-white/10">
-                  <div className="flex items-start gap-3">
-                    <ArrowRight className="w-5 h-5 flex-shrink-0 mt-1 text-orange-400 group-hover/item:translate-x-1 transition-transform" />
-                    <div>
-                      <p className="text-white font-medium italic leading-relaxed">Post-Pandemic Audience Engagement: A Multi-National Study</p>
-                      <p className="text-sm text-orange-300 mt-1 font-semibold">September 2025</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="group/item bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-all cursor-pointer border border-white/10">
-                  <div className="flex items-start gap-3">
-                    <ArrowRight className="w-5 h-5 flex-shrink-0 mt-1 text-orange-400 group-hover/item:translate-x-1 transition-transform" />
-                    <div>
-                      <p className="text-white font-medium italic leading-relaxed">Digital Revenue Streams in Performing Arts Organizations</p>
-                      <p className="text-sm text-orange-300 mt-1 font-semibold">August 2025</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <button className="mt-6 text-white font-semibold flex items-center gap-2 group/btn">
-                <span className="group-hover/btn:underline">Explore all research</span>
-                <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
-              </button>
-            </div>
-          </div>
-        </div> */}
+        
       </div>
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+// // proffessional styled design
+
+// import React from 'react';
+
+// // Mock images
+// const abtimg = "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=900&fit=crop";
+
+// export default function AboutSection() {
+//   const principles = [
+//     { title: "Evidence-based practices", description: "Grounded in research" },
+//     { title: "Strategic frameworks", description: "Forward-thinking solutions" },
+//     { title: "Global standards", description: "International best practices" }
+//   ];
+
+//   return (
+//     <section id="about-detailed" className="py-40 bg-white">
+//       <div className="max-w-8xl mx-auto px-6 lg:px-8">
+        
+//         <div className="grid lg:grid-cols-2 gap-20 items-start">
+          
+//           {/* Left Content */}
+//           <div>
+//             <div className="inline-block mb-3">
+//               <span className="text-xs font-medium tracking-wider uppercase text-gray-500">
+//                 About FIAMS
+//               </span>
+//             </div>
+            
+//             <h2 className="text-5xl lg:text-6xl font-medium tracking-tight text-gray-900 mb-8 leading-[1.1]">
+//               Excellence in arts management education
+//             </h2>
+            
+//             <div className="space-y-6 mb-12">
+//               <p className="text-lg text-gray-600 leading-relaxed">
+//                 At FIAMS, we believe that the intersection of creativity and strategic management creates unparalleled value. Our integrated approach combines artistic vision with business acumen, fostering leaders who can navigate the complex landscape of contemporary cultural industries.
+//               </p>
+//               <p className="text-gray-500 leading-relaxed">
+//                 Through rigorous research, professional development programs, and global networking opportunities, we empower arts professionals to drive meaningful change in their organizations and communities.
+//               </p>
+//             </div>
+
+//             {/* Principles List */}
+//             <div className="space-y-1 border-l border-gray-200 mb-12">
+//               {principles.map((principle, index) => (
+//                 <div
+//                   key={index}
+//                   className="pl-8 py-4 border-l-2 border-transparent hover:border-gray-900 transition-all duration-200"
+//                 >
+//                   <div className="font-medium text-gray-900 mb-1">
+//                     {principle.title}
+//                   </div>
+//                   <div className="text-sm text-gray-500">
+//                     {principle.description}
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+
+//             <button className="bg-gray-900 text-white px-8 py-4 hover:bg-gray-800 transition-colors text-sm font-medium">
+//               Learn more about us
+//             </button>
+//           </div>
+
+//           {/* Right Image */}
+//           <div className="relative lg:sticky lg:top-8">
+//             <div className="aspect-[3/4] bg-gray-100 overflow-hidden">
+//               <img 
+//                 src={abtimg}
+//                 alt="FIAMS team collaboration"
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+            
+//             {/* Stats Overlay */}
+//             <div className="absolute bottom-8 left-8 right-8 bg-white p-8 shadow-lg">
+//               <div className="grid grid-cols-2 gap-8">
+//                 <div>
+//                   <div className="text-3xl font-medium text-gray-900 mb-1">25+</div>
+//                   <div className="text-sm text-gray-600">Years of impact</div>
+//                 </div>
+//                 <div>
+//                   <div className="text-3xl font-medium text-gray-900 mb-1">60+</div>
+//                   <div className="text-sm text-gray-600">Countries reached</div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//         </div>
+
+//         {/* Bottom Section - Research & Publications */}
+//         <div className="mt-32 pt-16 border-t border-gray-200">
+//           <div className="grid md:grid-cols-3 gap-12">
+            
+//             <div>
+//               <h3 className="text-xl font-medium text-gray-900 mb-4">
+//                 Our Approach
+//               </h3>
+//               <p className="text-gray-600 text-sm leading-relaxed">
+//                 We integrate academic rigor with practical application, ensuring our programs remain relevant and impactful in rapidly evolving cultural sectors.
+//               </p>
+//             </div>
+
+//             <div>
+//               <h3 className="text-xl font-medium text-gray-900 mb-4">
+//                 Research Focus
+//               </h3>
+//               <p className="text-gray-600 text-sm leading-relaxed">
+//                 Our faculty and partners conduct cutting-edge research in cultural policy, audience development, and organizational sustainability.
+//               </p>
+//             </div>
+
+//             <div>
+//               <h3 className="text-xl font-medium text-gray-900 mb-4">
+//                 Global Network
+//               </h3>
+//               <p className="text-gray-600 text-sm leading-relaxed">
+//                 Connect with arts leaders worldwide through our extensive network of professionals, institutions, and industry partners.
+//               </p>
+//             </div>
+
+//           </div>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }

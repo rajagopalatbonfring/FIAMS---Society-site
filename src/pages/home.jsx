@@ -19,14 +19,14 @@ export default function Home() {
       <TopHeader />
       <Navbar />
       <Hero />
-      <AboutSection />
       <Stats />
+      <AboutSection />
       <Services/>
-      <Research />
       <Development />
-      <Events />
+      <Research />
       <Networks />
       <Membership />
+      <Events />
       <FinalCTA />
       <Footer />
     </>

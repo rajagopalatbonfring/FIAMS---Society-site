@@ -1,54 +1,3 @@
-// export default function Events() {
-//   const events = [
-//     {
-//       date: "March 15-18, 2026",
-//       title: "Global Arts Management Summit 2026",
-//       desc: "Theme: Cultural Renaissance: Leadership in the Digital Age. London, UK."
-//     },
-//     {
-//       date: "November 22-23, 2025",
-//       title: "Arts Funding Innovation Conference",
-//       desc: "Exploring innovative funding models in Toronto, Canada."
-//     },
-//     {
-//       date: "December 10, 2025",
-//       title: "Virtual Symposium: Museum Management",
-//       desc: "Excellence in museum leadership, online."
-//     }
-//   ];
-
-//   return (
-//     <section id="events" className="py-24 bg-gray-50">
-//       <div className="container">
-//         <div className="text-center mb-20">
-//           <h2 className="text-5xl lg:text-6xl font-bold mb-6">Active Federation Initiatives <br/> & Upcoming Opportunities</h2>
-//           <p className="text-xl text-gray-600 max-w-2xl mx-auto">Join our global events and initiatives to connect and collaborate.</p>
-//         </div>
-
-//         <div className="flex gap-4 mb-16 flex-wrap">
-//           <a href="#" className="px-8 py-4 bg-fiams-gold text-fiams-charcoal rounded-full font-semibold hover:bg-fiams-gold/90 transition">Events</a>
-//           <a href="#" className="px-8 py-4 border-2 border-fiams-gold text-fiams-charcoal rounded-full font-semibold hover:bg-fiams-gold transition">Initiatives</a>
-//           <a href="#" className="px-8 py-4 border-2 border-fiams-gold text-fiams-charcoal rounded-full font-semibold hover:bg-fiams-gold transition">Conferences</a>
-//         </div>
-
-//         <div className="grid md:grid-cols-3 gap-8">
-//           {events.map((event, index) => (
-//             <div key={index} className="bg-white rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all overflow-hidden group">
-//               <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900"></div>
-//               <div className="p-8">
-//                 <div className="text-sm text-gray-500 mb-4 opacity-75">{event.date}</div>
-//                 <h3 className="text-2xl font-bold mb-4 text-fiams-purple group-hover:text-fiams-purple/80 transition">{event.title}</h3>
-//                 <p className="text-gray-600 leading-relaxed">{event.desc}</p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
 
 
 import React, { useState } from 'react';
@@ -77,13 +26,13 @@ const ActiveFederationEvents = () => {
   ];
 
   return (
-    <section className="bg-gray-200 bg-gradient-to-r from-white via-gray-200 to-white mx-auto py-8 px-5 md:py-12 md:px-5 max-[480px]:py-6 max-[480px]:px-4" id="events">
+    <section className="bg-white mx-auto py-8 px-5 md:py-12 md:px-5 max-[480px]:py-6 max-[480px]:px-4" id="events">
       <div className="container mx-auto px-[clamp(15px,2vw,20px)]">
-        <span className="text-sm font-semibold text-fiams-gold bg-fiams-gold/30 px-4 py-2 rounded-full inline-block">
+        <span className="text-sm font-semibold text-fiams-gold bg-fiams-gold/30 px-4 py-2 mb-6 rounded-full inline-blocktext-sm font-semibold text-purple-600 bg-purple-100 px-4 py-2 rounded-full inline-block">
           Events
         </span>
         <h2 className="text-5xl lg:text-6xl font-bold text-[#2c3e50] mb-5 leading-[1.2]">
-          Active Federation Initiatives <br />& Upcoming Opportunities
+          Upcoming Opportunities
         </h2>
         <p className="text-[#555555] text-xl text-gray-900/90 mb-8 leading-relaxed mb-8">
           Join our global events and initiatives to connect and collaborate.
@@ -106,8 +55,8 @@ const ActiveFederationEvents = () => {
                 transition-all duration-300 ease-in-out
                 ${
                   activeTab === tab
-                    ? 'bg-transparent text-[black]'
-                    : 'bg-fiams-gold text-[black] hover:bg-transparent hover:text-[#555555]'
+                    ? 'bg-white text-[black]'
+                    : 'bg-fiams-gold text-[black] hover:bg-white hover:text-[#555555]'
                 }
               `}
             >
@@ -144,3 +93,180 @@ const ActiveFederationEvents = () => {
 };
 
 export default ActiveFederationEvents;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // proffessional styled design
+
+// import React, { useState } from 'react';
+
+// const ActiveFederationEvents = () => {
+//   const [activeTab, setActiveTab] = useState('Events');
+
+//   const tabs = ['Events', 'Initiatives', 'Conferences'];
+
+//   const events = [
+//     {
+//       date: 'Mar 15-18',
+//       year: '2026',
+//       title: 'Global Arts Management Summit',
+//       location: 'London, UK',
+//       theme: 'Cultural Renaissance: Leadership in the Digital Age',
+//       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop'
+//     },
+//     {
+//       date: 'Nov 22-23',
+//       year: '2025',
+//       title: 'Arts Funding Innovation Conference',
+//       location: 'Toronto, Canada',
+//       theme: 'Exploring innovative funding models',
+//       image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=400&fit=crop'
+//     },
+//     {
+//       date: 'Dec 10',
+//       year: '2025',
+//       title: 'Virtual Symposium: Museum Management',
+//       location: 'Online',
+//       theme: 'Excellence in museum leadership',
+//       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop'
+//     }
+//   ];
+
+//   return (
+//     <section className="py-40 bg-gray-50" id="events">
+//       <div className="max-w-8xl mx-auto px-6 lg:px-8">
+        
+//         {/* Header */}
+//         <div className="mb-20">
+//           <div className="inline-block mb-3">
+//             <span className="text-xs font-medium tracking-wider uppercase text-gray-500">
+//               Events & Initiatives
+//             </span>
+//           </div>
+//           <h2 className="text-5xl lg:text-6xl font-medium tracking-tight text-gray-900 mb-6 max-w-4xl">
+//             Connect at our global gatherings
+//           </h2>
+//           <p className="text-lg text-gray-600 max-w-2xl">
+//             Join arts leaders from around the world at our signature events.
+//           </p>
+//         </div>
+
+//         {/* Filter Tabs */}
+//         <div className="mb-16 border-b border-gray-200">
+//           <div className="flex gap-12">
+//             {tabs.map((tab) => (
+//               <button
+//                 key={tab}
+//                 onClick={() => setActiveTab(tab)}
+//                 className={`
+//                   pb-4 text-sm font-medium tracking-wide transition-colors relative
+//                   ${activeTab === tab 
+//                     ? 'text-gray-900' 
+//                     : 'text-gray-400 hover:text-gray-600'
+//                   }
+//                 `}
+//               >
+//                 {tab}
+//                 {activeTab === tab && (
+//                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-900"></div>
+//                 )}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Events Grid */}
+//         <div className="grid lg:grid-cols-3 gap-px bg-gray-200">
+//           {events.map((event, index) => (
+//             <div
+//               key={index}
+//               className="group bg-white hover:bg-gray-50 transition-colors"
+//             >
+//               <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+//                 <img 
+//                   src={event.image}
+//                   alt={event.title}
+//                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+//                 />
+//               </div>
+//               <div className="p-10">
+//                 <div className="flex items-baseline gap-3 mb-6">
+//                   <div className="text-2xl font-medium text-gray-900">
+//                     {event.date}
+//                   </div>
+//                   <div className="text-sm text-gray-400">
+//                     {event.year}
+//                   </div>
+//                 </div>
+                
+//                 <h3 className="text-xl font-medium text-gray-900 mb-3 leading-tight">
+//                   {event.title}
+//                 </h3>
+                
+//                 <div className="text-sm text-gray-500 mb-4">
+//                   {event.location}
+//                 </div>
+                
+//                 <p className="text-gray-600 text-sm leading-relaxed mb-8">
+//                   {event.theme}
+//                 </p>
+
+//                 <button className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors underline underline-offset-4">
+//                   Register now
+//                 </button>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Bottom Info */}
+//         <div className="mt-20 pt-16 border-t border-gray-200">
+//           <div className="grid md:grid-cols-2 gap-16">
+//             <div>
+//               <h3 className="text-2xl font-medium text-gray-900 mb-4">
+//                 Past events archive
+//               </h3>
+//               <p className="text-gray-600 mb-6">
+//                 Access recordings, presentations, and resources from previous gatherings.
+//               </p>
+//               <button className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors underline underline-offset-4">
+//                 Browse archive
+//               </button>
+//             </div>
+//             <div>
+//               <h3 className="text-2xl font-medium text-gray-900 mb-4">
+//                 Host an event
+//               </h3>
+//               <p className="text-gray-600 mb-6">
+//                 Interested in bringing a federation event to your city? Learn about hosting opportunities.
+//               </p>
+//               <button className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors underline underline-offset-4">
+//                 Contact us
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default ActiveFederationEvents;

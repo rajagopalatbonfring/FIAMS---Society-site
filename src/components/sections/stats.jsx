@@ -29,7 +29,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="py-10 bg-fiams-purple/70 text-white">
+    <section className="py-10 bg-fiams-purple/90 text-white">
       <Container>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
           {stats.map((stat, i) => (

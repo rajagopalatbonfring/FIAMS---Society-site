@@ -15,7 +15,7 @@ export default function Research() {
   return (
     <section id="research" className="py-24 relative" 
       style={{backgroundImage: `url(${researchBg})`, backgroundSize: 'cover'}}>
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/30 backdrop-blur"></div>
       <div className="container relative z-10">
         <div className="text-left flex flex-col lg:flex-row gap-16 items-start mb-20">
           <div className="lg:w-1/2">
@@ -57,9 +57,9 @@ export default function Research() {
           <div className="group relative rounded-3xl overflow-hidden shadow-xl h-full md:h-[450px] shadow-white/20 hover:shadow-white/40 hover:shadow-2xl transition-all duration-300">
             <div 
               className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
-               style={{ backgroundImage: `url(${currentPub})`, backgroundSize:'cover'}}
+              //  style={{ backgroundImage: `url(${currentPub})`, backgroundSize:'cover'}}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-purple-300/80" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-purple-300/90" />
             
             <div className="relative h-full flex flex-col p-10 text-white">
               <div className="flex items-center gap-4 mb-8">
@@ -115,9 +115,9 @@ export default function Research() {
           <div className="group relative rounded-3xl overflow-hidden shadow-xl h-full md:h-[450px] shadow-white/20 hover:shadow-white/40 hover:shadow-2xl transition-all duration-300">
             <div 
               className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
-              style={{ backgroundImage: `url(${recentResearch})`, backgroundSize:'cover'}}
+              // style={{ backgroundImage: `url(${recentResearch})`, backgroundSize:'cover'}}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-orange-300/80" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-orange-300/90" />
             
             <div className="relative h-full flex flex-col p-8 text-white">
               <div className="flex items-center gap-4 mb-6">
