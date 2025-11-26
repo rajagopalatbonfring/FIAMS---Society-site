@@ -51,7 +51,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-32 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-16 text-left">
