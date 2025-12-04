@@ -70,7 +70,7 @@ const ActiveFederationEvents = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className="flex flex-col gap-0 overflow-hidden transition-all duration-300 ease-in-out"
+              className="flex flex-col gap-0 overflow-hidden shadow-xl p-2 rounded-[20px] transition-all duration-300 ease-in-out"
             >
               <div className="rounded-[20px] w-full h-[250px] max-md:h-[180px] max-[480px]:h-[160px] bg-[#555555] relative"></div>
               <div className="py-[10px] px-[10px] max-md:py-4 max-md:px-4 max-[480px]:py-3 max-[480px]:px-3">
