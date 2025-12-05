@@ -14,7 +14,7 @@ const ProfessionalDevelopment = () => {
           <h2 className="text-5xl lg:text-6xl font-bold text-[#2c3e50] mb-5 leading-[1.2]">
             Elevate Your Arts Management Expertise
           </h2>
-          <p className="text-xl text-gray-900/90 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-900/90 mb-8 leading-relaxed"> 
             Advance your career with our tailored professional development programs.
           </p>
         </div>
@@ -22,7 +22,7 @@ const ProfessionalDevelopment = () => {
         {/* Expertise Grid */}
         <div className="text-left grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] max-md:grid-cols-1 gap-[30px] max-md:gap-5 items-start mb-[clamp(40px,6vw,60px)] max-md:mb-[clamp(30px,4vw,40px)]">
           {/* White Card */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
+          <div className="bg-[#0A0D2C] rounded-lg overflow-hidden shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
             <div className="h-[150px] overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" 
@@ -34,13 +34,13 @@ const ProfessionalDevelopment = () => {
               {/* <div className="w-12 h-12 mb-5 flex items-center justify-center bg-[rgba(255,107,53,0.1)] rounded-lg text-2xl">
                 🎓
               </div> */}
-              <h3 className="text-[clamp(20px,3vw,24px)] max-md:text-[clamp(18px,2.8vw,22px)] max-[480px]:text-[clamp(16px,2.5vw,20px)] font-bold mb-[15px] leading-[1.3] text-fiams-gold">
+              <h3 className="text-[clamp(20px,3vw,24px)] max-md:text-[clamp(18px,2.8vw,22px)] max-[480px]:text-[clamp(16px,2.5vw,20px)] font-bold mb-[15px] leading-[1.3] text-white">
                 Executive Leadership <br /> Series
               </h3>
-              <p className="text-[clamp(13px,2vw,15px)] max-md:text-[clamp(12px,1.8vw,14px)] max-[480px]:text-[clamp(11px,1.6vw,13px)] leading-[1.6] mb-[25px] text-[#6c757d]">
+              <p className="text-[clamp(13px,2vw,15px)] max-md:text-[clamp(12px,1.8vw,14px)] max-[480px]:text-[clamp(11px,1.6vw,13px)] leading-[1.6] mb-[25px] text-white">
                 Strategic planning, governance, and financial sustainability for cultural leaders.
               </p>
-              <button className="bg-fiams-gold text-white border-none py-3 px-6 max-[480px]:py-[10px] max-[480px]:px-5 rounded font-semibold text-[clamp(12px,1.8vw,14px)] max-[480px]:text-[clamp(11px,1.6vw,13px)] cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
+              <button className="bg-transparent text-white border-2 border-white py-3 px-6 max-[480px]:py-[10px] max-[480px]:px-5 rounded font-semibold text-[clamp(12px,1.8vw,14px)] max-[480px]:text-[clamp(11px,1.6vw,13px)] cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
                 Explore Series
               </button>
             </div>

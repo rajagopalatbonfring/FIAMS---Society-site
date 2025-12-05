@@ -156,7 +156,7 @@ export default function Research() {
           </div>
         </div>
 
-         <button className="btn btn--primary bg-fiams-gold/80 btn--lg mt-20 hover:bg-fiams-gold">Explore More</button>
+         <button className="btn btn--primary bg-fiams-gold btn--lg mt-20 hover:bg-fiams-gold/80">Explore More</button>
       </div>
     </section>
   );

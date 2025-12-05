@@ -41,7 +41,7 @@ export default function AccreditationRecognition() {
       className="text-left py-20 bg-gradient-to-br from-fiams-purple/5 via-white to-fiams-gold/5 relative"
       style={{backgroundImage: `url(${BgAccerditation})`, backgroundSize: 'cover'}}
     >
-      <div className="absolute inset-0 bg-black/30 backdrop-blur"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       <Container className="relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
