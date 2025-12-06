@@ -34,7 +34,7 @@ import bgimg from '../../assets/heroImg.jpg';
 export default function Hero() {
   return (
     <section 
-      className="relative min-h-[90vh] flex items-center bg-cover bg-center" 
+      className="relative min-h-[90vh] flex items-center bg-cover bg-center mt-8" 
       style={{ backgroundImage: `url(${bgimg})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-black/45"></div>
