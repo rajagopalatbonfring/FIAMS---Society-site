@@ -119,13 +119,13 @@ export default function FinalCTA() {
 
       {/* CONTENT */}
       <section className="relative z-20 py-24 text-center px-8">
-        <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+        <h2 className="text-5xl md:text-7xl font-semibold text-white mb-8 leading-tight">
           Join the Global Community<br />Advancing Arts Management<br />Excellence
         </h2>
         <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-12 opacity-90">
           Connect with 12,500+ cultural leaders, access cutting-edge research, and advance your impact in the arts and cultural sector.
         </p>
-
+ 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <button className="px-8 py-4 bg-white text-purple-700 font-bold text-lg rounded-full hover:bg-gray-100 transition hover:scale-105 shadow-xl">
             Apply for Membership

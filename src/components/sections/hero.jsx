@@ -37,13 +37,13 @@ export default function Hero() {
       className="relative min-h-[90vh] flex items-center bg-cover bg-center mt-8" 
       style={{ backgroundImage: `url(${bgimg})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-black/45"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-black/45 to-black/25"></div>
       
       <div className="container relative z-10">
         <div className="max-w-8xl space-y-16 mx-auto flex flex-col items-center justify-center">
         <div> 
           {/* ORGANIZATION NAME - Subtle, elegant */}
-          <p className="text-sm uppercase tracking-widest text-orange-400 font-semibold mb-4">
+          <p className="text-sm uppercase tracking-widest text-fiams-gold font-semibold mb-4">
             FIAMS - Federation of International Arts Management Studies
           </p>
 

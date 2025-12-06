@@ -472,7 +472,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 bg-white backdrop-blur-3xl border-b border-white/10 z-50">
+      <header className="fixed left-0 right-0 top-0 bg-white shadow-md backdrop-blur-3xl border-b border-white/10 z-50">
         <Container>
           <div className="flex items-center justify-between py-5">
 
@@ -575,7 +575,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(true)}
               className="lg:hidden p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20"
             >
-              <Menu size={24} className="text-white" />
+              <Menu size={24} className="text-gray-900" />
             </button>
           </div>
         </Container>

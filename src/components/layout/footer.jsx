@@ -378,7 +378,7 @@ const links = {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-white overflow-hidden border-t border-white/10">
+    <footer className="relative bg-gray-900 text-white overflow-hidden border-t border-white/10">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-fiams-purple/30 via-black to-fiams-gold/20" />
       </div>
@@ -387,21 +387,20 @@ export default function Footer() {
         <div className="relative py-20">
 
           {/* Top: Logo + Newsletter */}
-          <div className="grid lg:grid-cols-12 gap-12 mb-16">
+          <div className="grid lg:grid-cols-12 gap-12 mb-16 text-left">
             <div className="lg:col-span-5">
-              <h2 className="text-7xl lg:text-9xl font-black leading-none 
-                             bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter 
+                             bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent">
                 FIAMS
               </h2>
               <p className="mt-4 text-gray-400 text-lg">Federation for Integrated Arts & Management Studies</p>
-              <div className="mt-6 w-28 h-1 bg-gradient-to-r from-fiams-purple to-fiams-gold" />
+              <div className="mt-6 w-28 h-1 bg-fiams-purple" />
             </div>
 
             <div className="lg:col-span-7">
               <div className="max-w-xl ml-auto relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-fiams-purple to-fiams-gold rounded-3xl blur-xl opacity-60 
-                                group-hover:opacity-90 transition duration-1000" />
-                <div className="relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8">
+                
+                <div className="relative bg-gray-500/50 backdrop-blur-2xl border border-white/10 rounded-3xl p-8">
                   <h3 className="text-2xl font-bold mb-2">Stay Connected</h3>
                   <p className="text-gray-400 text-sm mb-6">Join 12,500+ leaders shaping the future of arts management.</p>
                   <form className="flex gap-3">
@@ -411,7 +410,7 @@ export default function Footer() {
                       className="flex-1 px-5 py-3.5 bg-white/10 border border-white/20 rounded-xl 
                                  focus:border-fiams-gold placeholder-gray-500 text-sm"
                     />
-                    <button className="px-7 py-3.5 bg-gradient-to-r from-fiams-purple to-fiams-gold 
+                    <button className="px-7 py-3.5 bg-fiams-gold 
                                        font-bold rounded-xl hover:shadow-2xl transition-all duration-300">
                       <ArrowRight size={20} />
                     </button>
@@ -422,16 +421,16 @@ export default function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-10 text-left">
             {Object.entries(links).map(([cat, items]) => (
               <div key={cat}>
                 <h4 className="font-bold uppercase tracking-widest text-xs text-fiams-gold mb-5">{cat}</h4>
                 <ul className="space-y-3">
                   {items.map((item) => (
                     <li key={item}>
-                      <a href="#" className="flex items-center gap-3 text-gray-400 hover:text-white text-sm 
+                      <a href="#" className="flex items-center gap-3 text-gray-400 group hover:text-white text-sm 
                                              transition-all duration-300 hover:translate-x-1">
-                        <span className="w-5 h-px bg-fiams-gold/40" />
+                        <span className="w-5 h-px bg-fiams-gold/80 transition-all duration-300 group-hover:bg-fiams-gold" />
                         {item}
                       </a>
                     </li>
