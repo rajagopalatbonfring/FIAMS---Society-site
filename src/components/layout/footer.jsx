@@ -364,73 +364,121 @@
 
 
 
-
-// components/Footer.jsx
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, ArrowRight } from "lucide-react";
-import Container from "../common/container";
+import { useState } from "react";
+
+const Container = ({ children }) => (
+  <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
+);
 
 const links = {
   about: ["Mission & Vision", "Leadership Board", "History & Achievements", "Accreditation"],
   programs: ["Arts Education", "Management Studies", "Integrated Curricula", "Professional Development"],
+  research : ["Research Papers", "Case Studies", "Art Journals", "Student Publications"],
   resources: ["Research Papers", "Career Services", "Industry Partnerships", "Educational Tools"],
   events: ["Workshops", "Exhibitions", "Conferences", "Cultural Events"],
 };
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = () => {
+    if (email) {
+      alert(`Subscribed with: ${email}`);
+      setEmail("");
+    }
+  };
+
   return (
-    <footer className="relative bg-gray-900 text-white overflow-hidden border-t border-white/10">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-fiams-purple/30 via-black to-fiams-gold/20" />
-      </div>
+    <footer className="relative bg-[#1a1a1a] text-white overflow-hidden rounded-t-2xl">
+      {/* Newsletter Section */}
+      <div className="bg-[#0a0a0a] border-b border-white/5">
+        <Container>
+          <div className="py-12 flex flex-col md:flex-row items-start md:items-center justify-between">
+            
+            <div className="text-left">
+                <h2 className="text-5xl lg:text-6xl font-black tracking-tighter bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent">
+                  FIAMS
+                </h2>
 
-      <Container>
-        <div className="relative py-20">
+                <p className="mt-4 text-gray-400 text-lg">Federation for Integrated Arts & Management Studies</p>
 
-          {/* Top: Logo + Newsletter */}
-          <div className="grid lg:grid-cols-12 gap-12 mb-16 text-left">
-            <div className="lg:col-span-5">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter 
-                             bg-gradient-to-r from-white via-gray-400 to-white bg-clip-text text-transparent">
-                FIAMS
-              </h2>
-              <p className="mt-4 text-gray-400 text-lg">Federation for Integrated Arts & Management Studies</p>
-              <div className="mt-6 w-28 h-1 bg-fiams-purple" />
+                {/* Social Icons */}
+                <div className="flex items-center gap-4 mt-8">
+                  {[
+                    { Icon: Facebook, href: "#" },
+                    { Icon: Linkedin, href: "#" },
+                    { Icon: Twitter, href: "#" },
+                    { Icon: Instagram, href: "#" }
+                  ].map(({ Icon, href }, i) => (
+                    <a
+                      key={i}
+                      href={href}
+                      className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 
+                              flex items-center justify-center transition-all duration-200
+                              border border-white/10 group hover:border-white/30"
+                    >
+                      <Icon size={16} className="text-fiams-gold group-hover:text-purple-500" />
+                    </a>
+                  ))}
+                </div>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="max-w-xl ml-auto relative group">
-                
-                <div className="relative bg-gray-500/50 backdrop-blur-2xl border border-white/10 rounded-3xl p-8">
-                  <h3 className="text-2xl font-bold mb-2">Stay Connected</h3>
-                  <p className="text-gray-400 text-sm mb-6">Join 12,500+ leaders shaping the future of arts management.</p>
-                  <form className="flex gap-3">
-                    <input
-                      type="email"
-                      placeholder="your@email.com"
-                      className="flex-1 px-5 py-3.5 bg-white/10 border border-white/20 rounded-xl 
-                                 focus:border-fiams-gold placeholder-gray-500 text-sm"
-                    />
-                    <button className="px-7 py-3.5 bg-fiams-gold 
-                                       font-bold rounded-xl hover:shadow-2xl transition-all duration-300">
-                      <ArrowRight size={20} />
-                    </button>
-                  </form>
+            <div className="flex flex-col mt-10 md:mt-0 gap-6 items-center p-6 md:p-10 rounded-xl">
+
+              <div className="self-start">
+                <h2 className="text-left text-3xl md:text-5xl font-bold mb-2 ">
+                  Stay Connected
+                </h2>
+                <p className="text-gray-400 text-sm md:text-base text-left">
+                  Join 12,500+ leaders shaping the future of arts management.
+                </p>
+              </div>
+              
+              <div className=" w-full md:w-auto lg:w-[700px]">
+                <div className="flex flex-col md:flex-row gap-2">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-3 bg-gray-600 border border-white/10 rounded-lg 
+                            focus:outline-none focus:border-fiams-purple text-sm text-white
+                            placeholder-gray-500 transition-colors"
+                  />
+                  <button 
+                    onClick={handleSubscribe}
+                    className="px-6 py-3 bg-fiams-gold hover:bg-[#FF7043] text-white font-semibold 
+                            rounded-lg transition-all duration-200 whitespace-nowrap"
+                  >
+                    Subscribe
+                  </button>
                 </div>
               </div>
-            </div>
-          </div>
 
+            </div>
+
+          </div>
+        </Container>
+      </div>
+
+      {/* Main Footer Content */}
+      <Container>
+        <div className="py-12 md:py-20">
           {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-10 text-left">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 mb-12 py-8 text-left">
             {Object.entries(links).map(([cat, items]) => (
               <div key={cat}>
-                <h4 className="font-bold uppercase tracking-widest text-xs text-fiams-gold mb-5">{cat}</h4>
+                <h4 className="text-md font-semibold text-white mb-4 capitalize">
+                  {cat}
+                </h4>
                 <ul className="space-y-3">
                   {items.map((item) => (
                     <li key={item}>
-                      <a href="#" className="flex items-center gap-3 text-gray-400 group hover:text-white text-sm 
-                                             transition-all duration-300 hover:translate-x-1">
-                        <span className="w-5 h-px bg-fiams-gold/80 transition-all duration-300 group-hover:bg-fiams-gold" />
+                      <a 
+                        href="#" 
+                        className="text-sm text-gray-400 hover:text-fiams-gold transition-colors duration-200 block"
+                      >
                         {item}
                       </a>
                     </li>
@@ -440,29 +488,37 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Bottom */}
-          <div className="mt-16 pt-12 border-t border-white/10 grid lg:grid-cols-3 gap-8 text-sm">
-            <div className="space-y-4">
-              <a href="mailto:info@fiams.org" className="flex items-center gap-3 hover:text-fiams-gold"><Mail size={18} /> info@fiams.org</a>
-              <a href="tel:+15551234567" className="flex items-center gap-3 hover:text-fiams-gold"><Phone size={18} /> +1 (555) 123-4567</a>
-            </div>
-            <div className="flex justify-center gap-5">
-              {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center 
-                                               border border-white/20 hover:border-fiams-gold hover:bg-fiams-gold/10 transition-all">
-                  <Icon size={20} />
+          {/* Bottom Section */}
+          <div className="pt-8 border-t border-white/10">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              {/* Contact Info */}
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm">
+                <a 
+                  href="mailto:info@fiams.org" 
+                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                >
+                  <Mail size={16} />
+                  <span>info@fiams.org</span>
                 </a>
-              ))}
-            </div>
-            <div className="text-right text-gray-500">
-              © 2025 FIAMS · All rights reserved
+                <a 
+                  href="tel:+15551234567" 
+                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                >
+                  <Phone size={16} />
+                  <span>+1 (555) 123-4567</span>
+                </a>
+              </div>
+
+              <p className="text-sm text-gray-500">
+                © 2025 Federation for Integrated Arts & Management Studies · All rights reserved
+              </p>
             </div>
           </div>
         </div>
       </Container>
 
-      <div className="absolute top-20 -left-20 w-80 h-80 bg-fiams-purple/20 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-20 -right-32 w-96 h-96 bg-fiams-gold/10 rounded-full blur-3xl -z-10" />
+      {/* Background Effects */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#9b59b6]/30 to-transparent" />
     </footer>
   );
 }
