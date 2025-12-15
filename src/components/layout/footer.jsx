@@ -435,7 +435,7 @@ export default function Footer() {
                 </p>
               </div>
               
-              <div className=" w-full md:w-auto lg:w-[700px]">
+              <div className=" w-full md:w-auto lg:w-[500px]">
                 <div className="flex flex-col md:flex-row gap-2">
                   <input
                     type="email"
