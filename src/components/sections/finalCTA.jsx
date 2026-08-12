@@ -49,10 +49,10 @@ export default function FinalCTA() {
         </p>
  
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <button className="px-8 py-4 bg-gray-900 text-fiams-gold font-bold text-lg rounded-full hover:bg-gray-500 transition hover:scale-105 shadow-xl">
+          <button className="px-8 py-4 bg-fiams-purple text-white font-bold text-lg rounded-full hover:bg-gray-500 transition hover:scale-105 shadow-xl">
             Apply for Membership
           </button>
-          <button className="px-8 py-4 border-4 border-gray-900 text-black font-bold text-lg rounded-full hover:bg-white hover:text-black transition hover:scale-105">
+          <button className="px-8 py-4 border-2 border-fiams-gold text-fiams-gold font-bold text-lg rounded-full hover:border-gray-500 hover:text-gray-500 transition hover:scale-105">
             Schedule Information Session
           </button>
         </div>

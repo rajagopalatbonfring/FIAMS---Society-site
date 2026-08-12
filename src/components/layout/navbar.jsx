@@ -422,11 +422,180 @@
 
 
 
+// // components/Navbar.jsx
+// import { useState } from "react";
+// import { Menu, ChevronDown, Search } from "lucide-react";
+// import Container from "../common/container";
+// import MobileMenu from "../layout/mobileMenu";
+
+// const navItems = [
+//   { label: "HOME", href: "/" },
+//   {
+//     label: "ABOUT",
+//     submenu: ["Mission & Vision", "Leadership Board", "History & Achievements", "Accreditation"],
+//   },
+//   {
+//     label: "PROGRAMS",
+//     submenu: ["Arts Education", "Management Studies", "Integrated Curricula", "Professional Development"],
+//   },
+//   {
+//     label: "JOURNALS & PUBLICATIONS",
+//     href: "https://gpim.in",
+//     // submenu: ["Research Papers", "Case Studies", "Art Journals", "Student Publications"],
+//   },
+//   {
+//     label: "EVENTS",
+//     submenu: ["Workshops", "Exhibitions", "Conferences", "Cultural Events"],
+//   },
+//   // {
+//   //   label: "GALLERY",
+//   //   submenu: ["Student Portfolio", "Faculty Artworks", "Exhibition Archives", "Success Stories"],
+//   // },
+//   {
+//     label: "RESOURCES",
+//     submenu: ["Career Services", "Industry Partnerships", "Educational Tools", "Guidelines & Policies"],
+//   },
+//   { label: "CONTACT", href: "/contact" },
+// ];
+
+// const sectionTitles = {
+//   ABOUT: "Discover FIAMS",
+//   PROGRAMS: "Academic Excellence",
+//   "R & PUB": "Research & Publications",
+//   EVENTS: "Events & Experiences",
+//   GALLERY: "Visual Gallery",
+//   RESOURCES: "Student Resources",
+// };
+
+// export default function Navbar() {
+//   const [mobileOpen, setMobileOpen] = useState(false);
+//   const [openMega, setOpenMega] = useState(null);
+
+//   return (
+//     <>
+//       <header className="fixed left-0 right-0 top-0 bg-white shadow-md backdrop-blur-3xl border-b border-white/10 z-50">
+//         <Container>
+//           <div className="flex items-center justify-between py-5">
+
+//             {/* Logo */}
+//             <a href="/" className="group">
+//               <h1 className="text-5xl lg:text-6xl font-black tracking-tighter 
+//                              bg-gradient-to-r from-black via-gray-500 to-gray-900 bg-clip-text text-transparent">
+//                 FIAMS
+//               </h1>
+//               <div className="h-1 w-0 bg-gradient-to-r from-fiams-purple to-fiams-gold 
+//                               group-hover:w-full transition-all duration-500" />
+//             </a>
+
+//             {/* Desktop Navigation */}
+//             <nav className="hidden lg:flex items-center gap-1">
+//               {navItems.map((item) => (
+//                 <div
+//                   key={item.label}
+//                   className="relative"
+//                   onMouseEnter={() => item.submenu && setOpenMega(item.label)}
+//                   onMouseLeave={() => setOpenMega(null)}
+//                 >
+//                   <a
+//                     href={item.href || "#"}
+//                     className="flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-widest
+//                                text-gray-900 hover:text-gray-600 transition-all duration-300"
+//                   >
+//                     {item.label}
+//                     {item.submenu && (
+//                       <ChevronDown
+//                         size={16}
+//                         className={`transition-transform duration-300 ${
+//                           openMega === item.label ? "rotate-180 text-fiams-gold" : ""
+//                         }`}
+//                       />
+//                     )}
+//                   </a>
+
+//                   {/* Mega Menu */}
+//                   {item.submenu && openMega === item.label && (
+//                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-8 w-screen max-w-6xl pointer-events-none">
+//                       <div className="mx-8 bg-gray-800/90 backdrop-blur-3xl border border-white/50 rounded-3xl shadow-2xl shadow-black/60 overflow-hidden pointer-events-auto">
+//                         <div className="p-10">
+//                           <h3 className="text-3xl font-bold text-white text-center mb-10">
+//                             {sectionTitles[item.label] || item.label}
+//                           </h3>
+
+//                           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+//                             {item.submenu.map((title, index) => (
+//                               <div key={index}>
+//                                 <h4 className="text-fiams-gold uppercase tracking-widest text-xs font-bold mb-6">
+//                                   {title}
+//                                 </h4>
+//                                 <ul className="space-y-3">
+//                                   {/* <li>
+//                                     <a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 
+//                                                            transition-all duration-300 text-sm block">
+//                                       Overview
+//                                     </a>
+//                                   </li>
+//                                   <li>
+//                                     <a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 
+//                                                            transition-all duration-300 text-sm block">
+//                                       Details & Curriculum
+//                                     </a>
+//                                   </li>
+//                                   <li>
+//                                     <a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 
+//                                                            transition-all duration-300 text-sm block">
+//                                       Faculty
+//                                     </a>
+//                                   </li> */}
+//                                   {/* <li>
+//                                     <a href="#" className="text-fiams-gold font-semibold hover:text-white 
+//                                                            hover:translate-x-1 transition-all duration-300 text-sm block">
+//                                       Learn More →
+//                                     </a>
+//                                   </li> */}
+//                                 </ul>
+//                               </div>
+//                             ))}
+//                           </div>
+//                         </div>
+//                       </div>
+//                     </div>
+//                   )}
+//                 </div>
+//               ))}
+
+//               {/* Search Icon */}
+//               <button className="ml-8 p-3.5 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 
+//                                  hover:bg-white/20 hover:border-fiams-gold transition-all duration-300">
+//                 <Search size={20} className="text-gray-900" />
+//               </button>
+//             </nav>
+
+//             {/* Mobile Menu Button */}
+//             <button
+//               onClick={() => setMobileOpen(true)}
+//               className="lg:hidden p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20"
+//             >
+//               <Menu size={24} className="text-gray-900" />
+//             </button>
+//           </div>
+//         </Container>
+//       </header>
+
+//       <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
 // components/Navbar.jsx
 import { useState } from "react";
 import { Menu, ChevronDown, Search } from "lucide-react";
 import Container from "../common/container";
-import MobileMenu from "../layout/mobileMenu";
 
 const navItems = [
   { label: "HOME", href: "/" },
@@ -439,16 +608,12 @@ const navItems = [
     submenu: ["Arts Education", "Management Studies", "Integrated Curricula", "Professional Development"],
   },
   {
-    label: "R & PUB",
-    submenu: ["Research Papers", "Case Studies", "Art Journals", "Student Publications"],
+    label: "JOURNALS & PUBLICATIONS",
+    href: "https://gpim.in",
   },
   {
     label: "EVENTS",
     submenu: ["Workshops", "Exhibitions", "Conferences", "Cultural Events"],
-  },
-  {
-    label: "GALLERY",
-    submenu: ["Student Portfolio", "Faculty Artworks", "Exhibition Archives", "Success Stories"],
   },
   {
     label: "RESOURCES",
@@ -460,128 +625,104 @@ const navItems = [
 const sectionTitles = {
   ABOUT: "Discover FIAMS",
   PROGRAMS: "Academic Excellence",
-  "R & PUB": "Research & Publications",
+  "JOURNALS & PUBLICATIONS": "Research & Publications",
   EVENTS: "Events & Experiences",
-  GALLERY: "Visual Gallery",
   RESOURCES: "Student Resources",
 };
 
-export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+export default function Navbar({ setMobileOpen }) {
   const [openMega, setOpenMega] = useState(null);
 
   return (
-    <>
-      <header className="fixed left-0 right-0 top-0 bg-white shadow-md backdrop-blur-3xl border-b border-white/10 z-50">
-        <Container>
-          <div className="flex items-center justify-between py-5">
+    <header className="fixed left-0 right-0 top-0 bg-white shadow-md backdrop-blur-3xl border-b border-white/10 z-50">
+      <Container>
+        <div className="flex items-center justify-between py-5">
 
-            {/* Logo */}
-            <a href="/" className="group">
-              <h1 className="text-5xl lg:text-6xl font-black tracking-tighter 
-                             bg-gradient-to-r from-black via-gray-500 to-gray-900 bg-clip-text text-transparent">
-                FIAMS
-              </h1>
-              <div className="h-1 w-0 bg-gradient-to-r from-fiams-purple to-fiams-gold 
-                              group-hover:w-full transition-all duration-500" />
-            </a>
+          {/* Logo - exact same as original */}
+          <a href="/" className="group">
+            <h1 className="text-5xl lg:text-6xl font-black tracking-tighter bg-gradient-to-r from-black via-gray-500 to-gray-900 bg-clip-text text-transparent">
+              FIAMS
+            </h1>
+            <div className="h-1 w-0 bg-gradient-to-r from-fiams-purple to-fiams-gold group-hover:w-full transition-all duration-500" />
+          </a>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
-              {navItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="relative"
-                  onMouseEnter={() => item.submenu && setOpenMega(item.label)}
-                  onMouseLeave={() => setOpenMega(null)}
+          {/* Desktop Navigation - exact same as original */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navItems.map((item) => (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => item.submenu && setOpenMega(item.label)}
+                onMouseLeave={() => setOpenMega(null)}
+              >
+                <a
+                  href={item.href || "#"}
+                  onClick={(e) => {
+                    if (item.label === "CONTACT" && !item.href?.startsWith("http")) {
+                      e.preventDefault();
+                      window.scrollTo({
+                        top: document.documentElement.scrollHeight,
+                        behavior: "smooth"
+                      });
+                    }
+                  }}
+                  className="flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-all duration-300"
                 >
-                  <a
-                    href={item.href || "#"}
-                    className="flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-widest
-                               text-gray-900 hover:text-gray-600 transition-all duration-300"
-                  >
-                    {item.label}
-                    {item.submenu && (
-                      <ChevronDown
-                        size={16}
-                        className={`transition-transform duration-300 ${
-                          openMega === item.label ? "rotate-180 text-fiams-gold" : ""
-                        }`}
-                      />
-                    )}
-                  </a>
+                  {item.label}
+                  {item.submenu && (
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-300 ${
+                        openMega === item.label ? "rotate-180 text-fiams-gold" : ""
+                      }`}
+                    />
+                  )}
+                </a>
 
-                  {/* Mega Menu */}
-                  {item.submenu && openMega === item.label && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-8 w-screen max-w-6xl pointer-events-none">
-                      <div className="mx-8 bg-gray-800/90 backdrop-blur-3xl border border-white/50 rounded-3xl 
-                                      shadow-2xl shadow-black/60 overflow-hidden pointer-events-auto">
-                        <div className="p-10">
-                          <h3 className="text-3xl font-bold text-white text-center mb-10">
-                            {sectionTitles[item.label] || item.label}
-                          </h3>
+                {/* Mega Menu - exact same as original */}
+                {item.submenu && openMega === item.label && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-8 w-screen max-w-6xl pointer-events-none">
+                    <div className="mx-8 bg-gray-800/90 backdrop-blur-3xl border border-white/50 rounded-3xl shadow-2xl shadow-black/60 overflow-hidden pointer-events-auto">
+                      <div className="p-10">
+                        <h3 className="text-3xl font-bold text-white text-center mb-10">
+                          {sectionTitles[item.label] || item.label}
+                        </h3>
 
-                          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                            {item.submenu.map((title, index) => (
-                              <div key={index}>
-                                <h4 className="text-fiams-gold uppercase tracking-widest text-xs font-bold mb-6">
-                                  {title}
-                                </h4>
-                                <ul className="space-y-3">
-                                  <li>
-                                    <a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 
-                                                           transition-all duration-300 text-sm block">
-                                      Overview
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 
-                                                           transition-all duration-300 text-sm block">
-                                      Details & Curriculum
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 
-                                                           transition-all duration-300 text-sm block">
-                                      Faculty
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#" className="text-fiams-gold font-semibold hover:text-white 
-                                                           hover:translate-x-1 transition-all duration-300 text-sm block">
-                                      Learn More →
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                          {item.submenu.map((title, index) => (
+                            <div key={index}>
+                              <h4 className="text-fiams-gold uppercase tracking-widest text-xs font-bold mb-6">
+                                {title}
+                              </h4>
+                              <ul className="space-y-3">
+                                {/* keep your commented structure or add real links later */}
+                              </ul>
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
-                  )}
-                </div>
-              ))}
+                  </div>
+                )}
+              </div>
+            ))}
 
-              {/* Search Icon */}
-              <button className="ml-8 p-3.5 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 
-                                 hover:bg-white/20 hover:border-fiams-gold transition-all duration-300">
-                <Search size={20} className="text-gray-900" />
-              </button>
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileOpen(true)}
-              className="lg:hidden p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20"
-            >
-              <Menu size={24} className="text-gray-900" />
+            {/* Search Icon - exact same */}
+            <button className="ml-8 p-3.5 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 hover:border-fiams-gold transition-all duration-300">
+              <Search size={20} className="text-gray-900" />
             </button>
-          </div>
-        </Container>
-      </header>
+          </nav>
 
-      <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
-    </>
+          {/* Hamburger - opens mobile menu */}
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="lg:hidden p-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20"
+            aria-label="Open mobile menu"
+          >
+            <Menu size={24} className="text-gray-900" />
+          </button>
+        </div>
+      </Container>
+    </header>
   );
 }

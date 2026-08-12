@@ -74,18 +74,22 @@ export default function TopHeader() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-3">
 
           {/* Left: Contact Info */}
-          <div className="flex flex-wrap items-center gap-5 md:gap-8 text-gray-100">
-            <a href="tel:+919876283923" className="flex items-center gap-2 hover:text-fiams-gold transition">
-              <Phone size={14} className="text-fiams-gold" />
-              <span>+91 98762 83923</span>
-            </a>
-            <a href="mailto:info@fiams.org" className="flex items-center gap-2 hover:text-fiams-gold transition">
-              <Mail size={14} className="text-fiams-gold" />
-              <span>info@fiams.org</span>
-            </a>
-            <div className="hidden lg:flex items-center gap-2">
-              <MapPin size={14} className="text-fiams-gold" />
-              <span>Coimbatore, Tamil Nadu</span>
+          <div className="hidden md:block">
+            <div className=" flex flex-wrap items-center gap-5 md:gap-8 text-gray-100">
+              <a href="tel:+918220013234" className="flex items-center gap-2 hover:text-fiams-gold transition">
+                <Phone size={14} className="text-fiams-gold" />
+                {/* <span>+91 98762 83923</span> */}
+                <span>+91 8220013234</span>
+              </a>
+              <a href="mailto:info@federationstudies.com" className="flex items-center gap-2 hover:text-fiams-gold transition">
+                <Mail size={14} className="text-fiams-gold" />
+                <span>info@federationstudies.com</span>
+              </a>
+              <div className="hidden lg:flex items-center gap-2">
+                {/* <MapPin size={14} className="text-fiams-gold" /> */}
+                {/* <span>Coimbatore, Tamil Nadu</span> */}
+                {/* <span>c/o. Saravanakumar Veerappan, No 404, Kuruchi road, Mukasipudur, Erode - 638314, India.</span> */}
+              </div>
             </div>
           </div>
 

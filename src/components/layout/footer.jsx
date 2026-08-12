@@ -494,25 +494,35 @@ export default function Footer() {
               {/* Contact Info */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm">
                 <a 
-                  href="mailto:info@fiams.org" 
+                  href="mailto:info@federationstudies.com" 
                   className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <Mail size={16} />
-                  <span>info@fiams.org</span>
+                  <span>info@federationstudies.com</span>
                 </a>
                 <a 
-                  href="tel:+15551234567" 
+                  href="tel:+918220013234" 
                   className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <Phone size={16} />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 8220013234</span>
                 </a>
+
+                
+                <span 
+                  className="flex items-center text-start gap-2 text-gray-400 hover:text-white transition-colors"
+                >
+                  <MapPin size={16} />
+                  No 404, Kuruchi road, Mukasipudur, Erode - 638314, India.
+                </span>
+              
               </div>
 
-              <p className="text-sm text-gray-500">
+
+            </div>
+              <p className="mt-10 text-sm text-gray-500">
                 © 2025 Federation for Integrated Arts & Management Studies · All rights reserved
               </p>
-            </div>
           </div>
         </div>
       </Container>
