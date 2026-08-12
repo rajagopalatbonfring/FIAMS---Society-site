@@ -11,15 +11,16 @@ import Networks from "../components/sections/networks";
 import Membership from "../components/sections/membership";
 import FinalCTA from "../components/sections/finalCTA";
 import Footer from "../components/layout/footer";
+import Publications from "../components/layout/publication";
 
 export default function Home() {
-  return ( 
+  return (
     <>
       <HeaderWrapper />
       <Hero />
       <Stats />
       <AboutSection />
-      <Services/>
+      <Services />
       <Development />
       <Research />
       <Networks />

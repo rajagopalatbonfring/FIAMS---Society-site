@@ -7,23 +7,32 @@ const ActiveFederationEvents = () => {
 
   const tabs = ['Events', 'Initiatives', 'Conferences'];
 
-  const events = [
+const events = [
     {
-      date: 'March 15-18, 2026',
-      title: 'Global Arts Management Summit 2026',
-      description: 'Theme: Cultural Renaissance: Leadership in the Digital Age. London, UK.'
+        date: 'March 15-18, 2026',
+        title: 'Global Arts Management Summit 2026',
+        description:
+            'Theme: Cultural Renaissance: Leadership in the Digital Age. London, UK.',
+        image:
+            'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=85'
     },
     {
-      date: 'November 22-23, 2025',
-      title: 'Arts Funding Innovation Conference',
-      description: 'Exploring innovative funding models in Toronto, Canada.'
+        date: 'November 22-23, 2025',
+        title: 'Arts Funding Innovation Conference',
+        description:
+            'Exploring innovative funding models in Toronto, Canada.',
+        image:
+            'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85'
     },
     {
-      date: 'December 10, 2025',
-      title: 'Virtual Symposium: Museum Management',
-      description: 'Excellence in museum leadership, online.'
+        date: 'December 10, 2025',
+        title: 'Virtual Symposium: Museum Management',
+        description:
+            'Excellence in museum leadership, online.',
+        image:
+            'https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=1200&q=85'
     }
-  ];
+];
 
   return (
     <section className="bg-white mx-auto py-8 px-5 md:py-12 md:px-5 max-[480px]:py-6 max-[480px]:px-4" id="events">
@@ -66,27 +75,37 @@ const ActiveFederationEvents = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="text-left grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-md:grid-cols-1 gap-6 max-md:gap-4">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-0 overflow-hidden shadow-xl p-2 rounded-[20px] transition-all duration-300 ease-in-out"
-            >
-              <div className="rounded-[20px] w-full h-[250px] max-md:h-[180px] max-[480px]:h-[160px] bg-[#555555] relative"></div>
-              <div className="py-[10px] px-[10px] max-md:py-4 max-md:px-4 max-[480px]:py-3 max-[480px]:px-3">
-                <div className="text-sm max-[480px]:text-[clamp(12px,2vw,13px)] text-[#555555] opacity-70 mb-2">
-                  {event.date}
-                </div>
-                <h3 className="text-xl max-[480px]:text-[clamp(16px,2.5vw,18px)] font-semibold text-[#2c2c54] leading-[1.4] m-0 mb-3">
-                  {event.title}
-                </h3>
-                <p className="text-[#555555] text-left text-base">
-                  {event.description}
-                </p>
-              </div>
-            </div>
-          ))}
+       <div className="text-left grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-md:grid-cols-1 gap-6 max-md:gap-4">
+  {events.map((event, index) => (
+    <div
+      key={index}
+      className="flex flex-col gap-0 overflow-hidden shadow-xl p-2 rounded-[20px] transition-all duration-300 ease-in-out"
+    >
+      {/* Event Image */}
+      <div
+        className="rounded-[20px] w-full h-[250px] max-md:h-[180px] max-[480px]:h-[160px] relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url("${event.image}")`,
+        }}
+      ></div>
+
+      {/* Event Content */}
+      <div className="py-[10px] px-[10px] max-md:py-4 max-md:px-4 max-[480px]:py-3 max-[480px]:px-3">
+        <div className="text-sm max-[480px]:text-[clamp(12px,2vw,13px)] text-[#555555] opacity-70 mb-2">
+          {event.date}
         </div>
+
+        <h3 className="text-xl max-[480px]:text-[clamp(16px,2.5vw,18px)] font-semibold text-[#2c2c54] leading-[1.4] m-0 mb-3">
+          {event.title}
+        </h3>
+
+        <p className="text-[#555555] text-left text-base">
+          {event.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );

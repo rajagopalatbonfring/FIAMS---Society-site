@@ -168,7 +168,7 @@
 //                       }`}
 //                     />
 //                   </button>
-                  
+
 //                   {/* Submenu */}
 //                   {openDropdowns[item.label] && (
 //                     <div className="bg-gradient-to-br from-fiams-purple/5 to-transparent">
@@ -259,7 +259,7 @@
 //   return (
 //     <>
 //       <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50" onClick={onClose} />
-      
+
 //       <div className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-black/95 backdrop-blur-3xl border-l border-white/10 z-50 overflow-y-auto">
 //         <div className="sticky top-0 bg-black/90 backdrop-blur-3xl border-b border-white/10 px-6 py-6 flex justify-between items-center">
 //           <h2 className="text-3xl font-black bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
@@ -376,7 +376,7 @@ export default function MobileMenu({ isOpen, onClose }) {
   const handleLinkClick = () => {
     onClose(); // Ensure close on every navigation
   };
-  
+
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
@@ -388,9 +388,8 @@ export default function MobileMenu({ isOpen, onClose }) {
     <>
       {/* Overlay backdrop */}
       <div
-        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-[9998] transition-opacity duration-400 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-[9998] transition-opacity duration-400 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         onClick={onClose}
       />
 
@@ -447,19 +446,17 @@ export default function MobileMenu({ isOpen, onClose }) {
                         {item.label}
                         <ChevronDown
                           size={22}
-                          className={`text-gray-400 transition-transform duration-300 ${
-                            openAccordion === item.label ? "rotate-180" : ""
-                          }`}
+                          className={`text-gray-400 transition-transform duration-300 ${openAccordion === item.label ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
 
                       {/* Submenu – smoother open, no arbitrary max-h limit */}
                       <div
-                        className={`grid transition-all duration-400 ease-in-out ${
-                          openAccordion === item.label
+                        className={`grid transition-all duration-400 ease-in-out ${openAccordion === item.label
                             ? "grid-rows-[1fr] opacity-100 pt-3 pb-5"
                             : "grid-rows-[0fr] opacity-0"
-                        }`}
+                          }`}
                       >
                         <div className="overflow-hidden px-6 bg-black/40 rounded-b-xl">
                           <p className="text-fiams-gold text-sm uppercase font-bold tracking-wider mb-5">

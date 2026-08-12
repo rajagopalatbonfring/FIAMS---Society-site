@@ -594,6 +594,7 @@
 
 // components/Navbar.jsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, ChevronDown, Search } from "lucide-react";
 import Container from "../common/container";
 
@@ -609,7 +610,8 @@ const navItems = [
   },
   {
     label: "JOURNALS & PUBLICATIONS",
-    href: "https://gpim.in",
+    // href: "https://gpim.in",
+    href: "/publication",
   },
   {
     label: "EVENTS",
@@ -640,7 +642,7 @@ export default function Navbar({ setMobileOpen }) {
 
           {/* Logo - exact same as original */}
           <a href="/" className="group">
-            <h1 className="text-5xl lg:text-6xl font-black tracking-tighter bg-gradient-to-r from-black via-gray-500 to-gray-900 bg-clip-text text-transparent">
+            <h1 className="px-6 text-5xl lg:text-6xl font-black tracking-tighter bg-gradient-to-r from-black via-gray-500 to-gray-900 bg-clip-text text-transparent">
               FIAMS
             </h1>
             <div className="h-1 w-0 bg-gradient-to-r from-fiams-purple to-fiams-gold group-hover:w-full transition-all duration-500" />
@@ -655,29 +657,44 @@ export default function Navbar({ setMobileOpen }) {
                 onMouseEnter={() => item.submenu && setOpenMega(item.label)}
                 onMouseLeave={() => setOpenMega(null)}
               >
-                <a
-                  href={item.href || "#"}
-                  onClick={(e) => {
-                    if (item.label === "CONTACT" && !item.href?.startsWith("http")) {
-                      e.preventDefault();
-                      window.scrollTo({
-                        top: document.documentElement.scrollHeight,
-                        behavior: "smooth"
-                      });
-                    }
-                  }}
-                  className="flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-all duration-300"
-                >
-                  {item.label}
-                  {item.submenu && (
-                    <ChevronDown
-                      size={16}
-                      className={`transition-transform duration-300 ${
-                        openMega === item.label ? "rotate-180 text-fiams-gold" : ""
-                      }`}
-                    />
-                  )}
-                </a>
+                {item.href?.startsWith("http") ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-all duration-300"
+                  >
+                    {item.label}
+                    {item.submenu && (
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform duration-300 ${openMega === item.label ? "rotate-180 text-fiams-gold" : ""}`}
+                      />
+                    )}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.href || "#"}
+                    onClick={(e) => {
+                      if (item.label === "CONTACT") {
+                        e.preventDefault();
+                        window.scrollTo({
+                          top: document.documentElement.scrollHeight,
+                          behavior: "smooth"
+                        });
+                      }
+                    }}
+                    className="flex items-center gap-2 px-6 py-3 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-all duration-300"
+                  >
+                    {item.label}
+                    {item.submenu && (
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform duration-300 ${openMega === item.label ? "rotate-180 text-fiams-gold" : ""}`}
+                      />
+                    )}
+                  </Link>
+                )}
 
                 {/* Mega Menu - exact same as original */}
                 {item.submenu && openMega === item.label && (
