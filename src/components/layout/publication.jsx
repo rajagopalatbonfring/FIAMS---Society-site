@@ -7,26 +7,29 @@ const journalsList = [
 
     },
     {
-        title: "TIE: Trends in Entrepreneurship Journal",
-        url: "https://tiejournals.com/tie/EditorialBoard",
-
-    },
-    {
-        title: "Global Tech Management Digest",
-        url: "https://globaltmdigest.com/",
-    },
-    {
-        title: "Journal of Indian Languages, Literature, and Multilingualism",
-        url: "https://indianlanguagesjournal.com/",
+        title: "International Journal of SDG's Prospects and Breakthroughs",
+        url: "https://sdgjournal.com",
     },
     {
         title: "Progression Journal of Human Demography and Anthropology",
-        url: "https://hdajournal.com/index.php/pjhda",
+        url: "https://hdajournal.com",
     },
     {
-        title: "International Journal of SDG's Prospects and Breakthroughs",
-        url: "https://sdgjournal.com/index.php/sdg",
+        title: "Global Tech Management Digest",
+        url: "https://globaltmdigest.com",
     },
+    {
+        title: "TIE: Trends in Entrepreneurship Journal",
+        url: "https://tiejournals.com",
+
+    },
+
+    // {
+    //     title: "Journal of Indian Languages, Literature, and Multilingualism",
+    //     url: "https://indianlanguagesjournal.com/",
+    // },
+
+
 ];
 
 export default function Publications() {
